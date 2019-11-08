@@ -9,6 +9,36 @@ img {
     width: 125px;
 }
 
+form {
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+}
+
+button {
+    background-color: #90C6F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.hyperlink {
+    text-decoration: underline;
+    color: #65a0f1;
+}
+
+.hyperlink:hover {
+    cursor: pointer;
+}
+
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -39,20 +69,26 @@ ul.topnav img.right {float: right;}
 }
 
 /* The popup form - hidden by default */
-.form-popup {
+.signUpForm-popup {
     display: none;
-    position: fixed;
-    /* bottom: 0; */
-    right: 15px;
+    margin-left: 25%;
+    margin-right:25%;
+    /* right: 15px; */
     border: 3px solid #f1f1f1;
-    z-index: 9;
-    justify-content: center;
+  }
+
+  .logInForm-popup {
+    display: none;
+    margin-left: 25%;
+    margin-right:25%;
+    /* right: 15px; */
+    border: 3px solid #f1f1f1;
   }
 
 /* Add styles to the form container */
 .form-container {
     max-width: 300px;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: white;
     align-content: center;
   }
@@ -65,4 +101,3 @@ ul.topnav img.right {float: right;}
     border: none;
     background: #f1f1f1;
   }
-
