@@ -5,8 +5,11 @@ body {
     margin: 0;
 }
 /* THis is the css styling for the nav bar by jb and mj */
+
 img {
-    width: 125px;
+    width: 110px;
+    margin: .5%;
+    padding-left: .5%;
 }
 
 form {
@@ -47,7 +50,7 @@ ul.topnav {
   background-color: #333;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {float: right;}
 
 ul.topnav li a {
   display: block;
@@ -57,15 +60,23 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
+ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+}
 
-ul.topnav li a.active {background-color: #90C6F4;}
+ul.topnav li a.active {
+    background-color: #90C6F4;
+}
 
-ul.topnav img.right {float: right;}
+ul.topnav img.left {
+    float: left;
+}
 
 @media screen and (max-width: 600px) {
-  ul.topnav img.right, 
-  ul.topnav li img {float: none;}
+  ul.topnav img.left, 
+  ul.topnav li img {
+      float: none;
+    }
 }
 
 /* The popup form - hidden by default */
@@ -100,4 +111,18 @@ ul.topnav img.right {float: right;}
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
+  }
+
+/*footer styling*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #90C6F4;
+    color: white;
+    text-align: center;
+    border-top: solid;
+    border-color: #111;
+    border-width: 5px;
   }
