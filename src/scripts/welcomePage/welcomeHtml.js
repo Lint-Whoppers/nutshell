@@ -11,7 +11,7 @@ export default {
     </nav>
     <div id="welcome-page">
         <h1>Welcome to Otter</h1>
-        <button>Sign Up</button>
+        <button id = "signUpButton">Sign Up</button>
         <div id="popup-container"></div>
     </div>
 `
