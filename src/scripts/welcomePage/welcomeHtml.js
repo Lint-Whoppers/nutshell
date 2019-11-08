@@ -1,9 +1,10 @@
 export default {
-    buildWelcomePageHtml: () => {
+    buildAndAppendWelcomePageHtml: () => {
     const welcomeHtml =  `     
     <div id="welcome-page">
         <h1>Welcome to Otter</h1>
         <button>Sign Up</button>
+        <div id="popup-container"></div>
     </div>
 `
 
