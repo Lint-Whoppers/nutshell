@@ -1,3 +1,8 @@
-import welcomePageTaco from "./welcomePage/welcomeHtml"
+import welcomePageTaco from "./welcomePage/welcomeHtml.js"
+import signUpForm from "./welcomePage/form.js"
 
-welcomePageTaco.buildWelcomePageHtml();
+welcomePageTaco.buildAndAppendWelcomePageHtml();
+
+signUpForm.buildAndAppendSignUpForm();
+
+console.log(signUpForm.buildAndAppendSignUpForm);
