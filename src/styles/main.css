@@ -4,7 +4,7 @@ body {
     font-weight: normal;
     margin: 0;
 }
-/* THis is the css styling for the nav bar by jb and mj */
+/* This is the css styling for the nav bar by jb and mj */
 
 img {
     width: 110px;
@@ -14,8 +14,10 @@ img {
 
 form {
     margin-left: 25%;
-    margin-right:25%;
+    margin-right: 25%;
+    margin-bottom: 80px;
     width: 50%;
+    
 }
 
 button {
@@ -99,7 +101,7 @@ ul.topnav img.left {
 /* Add styles to the form container */
 .form-container {
     max-width: 300px;
-    /* padding: 10px; */
+    margin-bottom: 70px;
     background-color: white;
     align-content: center;
   }
@@ -125,4 +127,5 @@ ul.topnav img.left {
     border-top: solid;
     border-color: #111;
     border-width: 5px;
+    margin-top: 25px;
   }

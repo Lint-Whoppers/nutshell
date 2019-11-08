@@ -21,7 +21,6 @@ const forms = {
                 <input type="confirmPassword" placeholder="Confirm Password" name="psw" required>
         
                 <button type="submit" class="btn">Create Account</button>
-                <button type="submit" class="btn signIn">Log In</button>
             </form>
         </div> 
             `
