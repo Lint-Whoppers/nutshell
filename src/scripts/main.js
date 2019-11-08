@@ -1,5 +1,4 @@
 import welcomePageTaco from "./welcomePage/welcomeHtml.js"
-import signUpForm from "./welcomePage/form.js"
 import events from "./welcomePage/eventListener.js";
 
 
@@ -10,3 +9,5 @@ import events from "./welcomePage/eventListener.js";
 // events.signUpButtonHandler();
 
 welcomePageTaco.buildAndAppendUserMainPage();
+events.signUpButtonHandler();
+events.logInButtonHandler();
