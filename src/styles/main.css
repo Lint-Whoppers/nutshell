@@ -2,14 +2,45 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
     font-weight: normal;
-    margin: 0;
 }
-/* THis is the css styling for the nav bar by jb and mj */
+/* This is the css styling for the nav bar by jb and mj */
 
 img {
     width: 110px;
     margin: .5%;
     padding-left: .5%;
+}
+
+form {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 80px;
+    width: 50%;
+    
+}
+
+button {
+    background-color: #90C6F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.hyperlink {
+    text-decoration: underline;
+    color: #65a0f1;
+}
+
+.hyperlink:hover {
+    cursor: pointer;
 }
 
 ul.topnav {
@@ -50,20 +81,24 @@ ul.topnav img.left {
 }
 
 /* The popup form - hidden by default */
-.form-popup {
+.signUpForm-popup {
     display: none;
-    position: fixed;
-    /* bottom: 0; */
-    right: 15px;
+    margin-left: 25%;
+    margin-right:25%;
     border: 3px solid #f1f1f1;
-    z-index: 9;
-    justify-content: center;
+  }
+
+  .logInForm-popup {
+    display: none;
+    margin-left: 25%;
+    margin-right:25%;
+    border: 3px solid #f1f1f1;
   }
 
 /* Add styles to the form container */
 .form-container {
     max-width: 300px;
-    padding: 10px;
+    margin-bottom: 70px;
     background-color: white;
     align-content: center;
   }
@@ -75,6 +110,10 @@ ul.topnav img.left {
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
+  }
+
+  #popup-container {
+      margin-bottom: 10%;
   }
 
 /*footer styling*/

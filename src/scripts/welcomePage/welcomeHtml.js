@@ -12,6 +12,7 @@ export default {
     <div id="welcome-page">
         <h1>Welcome to Otter</h1>
         <button id = "signUpButton">Sign Up</button>
+        <p class="hyperlink" id="logInButton">Already have an account? Click here to login.</p>
         <div id="popup-container"></div>
     </div>
     <div class="footer">
