@@ -2,6 +2,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
     font-weight: normal;
+    margin: 0;
 }
 /* This is the css styling for the nav bar by jb and mj */
 
@@ -115,6 +116,10 @@ ul.topnav img.left {
   #popup-container {
       margin-bottom: 10%;
   }
+/* Main Page Styling */
+#main-page {
+  display: flex;
+}
 
 /*footer styling*/
 .footer {
@@ -129,3 +134,4 @@ ul.topnav img.left {
     border-color: #111;
     border-width: 5px;
   }
+

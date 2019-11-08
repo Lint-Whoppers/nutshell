@@ -34,8 +34,8 @@ export default {
             <li><a href="#contact">Contact</a></li>
         </ul>
         </nav>
+        <h1>Otter</h1>
         <div id="main-page">
-            <h1>Otter</h1>
             <div id="Friends">Friends</div>
             <div id="Events">Events</div>
             <div id="Messages">Messages</div>
