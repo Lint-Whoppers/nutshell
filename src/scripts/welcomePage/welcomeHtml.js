@@ -14,6 +14,9 @@ export default {
         <button id = "signUpButton">Sign Up</button>
         <div id="popup-container"></div>
     </div>
+    <div class="footer">
+        <p>Made By: Charles Jackson, Jeremiah Bell, Michelle Johnson, Sam Pita</p>
+    </div>
 `
 
 const welcomePageContainer = document.querySelector("#page-container")
