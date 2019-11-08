@@ -85,7 +85,6 @@ ul.topnav img.left {
     display: none;
     margin-left: 25%;
     margin-right:25%;
-    /* right: 15px; */
     border: 3px solid #f1f1f1;
   }
 
@@ -93,7 +92,6 @@ ul.topnav img.left {
     display: none;
     margin-left: 25%;
     margin-right:25%;
-    /* right: 15px; */
     border: 3px solid #f1f1f1;
   }
 
@@ -112,6 +110,10 @@ ul.topnav img.left {
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
+  }
+
+  #popup-container {
+      margin-bottom: 10%;
   }
 
 /*footer styling*/
