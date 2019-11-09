@@ -4,11 +4,19 @@ import forms from "./form.js"
 // Event listener for Sign Up button
 
 const events = {            //  Declare object and create method
+    createAccountButtonHandler () {
+    const createAccountButton = document.querySelector("#createAccountButton")
+    createAccountButton.addEventListener("click", () => {
+        forms.getUserInputAndSendToMain()
+    })
+    },
+
     signUpButtonHandler () {
     const signUpButton = document.querySelector("#signUpButton")
     signUpButton.addEventListener("click", () => {
         forms.buildAndAppendSignUpForm()
         document.querySelector(".signUpForm-popup").style.display = "block"
+        this.createAccountButtonHandler()
     })
 },
 
@@ -19,6 +27,7 @@ const events = {            //  Declare object and create method
         document.querySelector(".logInForm-popup").style.display = "block"
     })
 }
+
 }
 
 export default events
