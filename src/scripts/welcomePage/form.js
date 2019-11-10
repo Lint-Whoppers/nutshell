@@ -8,7 +8,9 @@ const forms = {
         <div class="signUpForm-popup">
             <form class="form-container">
                 <h1>Sign Up</h1>
-            
+
+                <input type="hidden" id="idInput">
+
                 <label for="firstName"><b>First Name</b></label>
                 <input type="text" placeholder="Enter First Name" name="firstName" id="firstNameInput" required>
 
@@ -61,6 +63,7 @@ getUserInputAndSendToMain() {
     const lastName = document.querySelector("#lastNameInput").value
     const email = document.querySelector("#emailInput").value
     const password = document.querySelector("#passwordInput").value
+    const id = document.querySelector("#idInput").value
 
     /* The below argument is shorthand for:
     {
@@ -68,8 +71,9 @@ getUserInputAndSendToMain() {
         "lastName": lastName,
         "email": email,
         "password": password
+        "userID" userID
     } */
-    return data.storeNewUser({firstName, lastName, email, password}).then(mainPage.buildAndAppendUserMainPage())
+    return data.storeNewUser({firstName, lastName, email, password, id}).then(mainPage.buildAndAppendUserMainPage())
 }
 }
 
