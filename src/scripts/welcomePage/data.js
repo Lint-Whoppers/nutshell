@@ -19,8 +19,17 @@ storeNewUser(newUserObject) {
         body: JSON.stringify(newUserObject)
     })
         .then(users => users.json())
-        .then(console.log(newUserObject))
-    }
+        // .then(console.log(newUserObject))
+    },
+
+// This is a new function inside the data export that is going to be used as our get request or get all for reference specifically on login.
+
+getUserByEmail(email) {
+    return fetch(`http://localhost:8088/users?email=${email}`)
+    .then(response => response.json())
+    // .then(response => console.log(response, "fromgetuserEmail"))
 }
+}
+
 
 export default data
