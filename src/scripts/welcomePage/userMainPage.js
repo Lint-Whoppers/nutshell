@@ -13,11 +13,11 @@ buildAndAppendUserMainPage: () => {
     </nav>
     <h1>Otter</h1>
     <div id="main-page">
-        <div id="Friends">Friends</div>
-        <div id="Events">Events</div>
-        <div id="Messages">Messages</div>
-        <div id="News">News</div>
-        <div id="ToDo">ToDo</div>
+        <div id="friends-container">Friends</div>
+        <div id="events-container">Events</div>
+        <div id="messages-container">Messages</div>
+        <div id="news-container">News</div>
+        <div id="toDo-container">ToDo</div>
         <div id="popup-container"></div>
     </div>
     <div class="footer">
