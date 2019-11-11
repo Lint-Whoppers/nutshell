@@ -1,3 +1,5 @@
+import html from "../messages/htmlMaker"
+
 // This file is responsible for building the main page after user logs in
 
 // This should be the injector for the next page call
@@ -15,7 +17,7 @@ buildAndAppendUserMainPage: () => {
     <div id="main-page">
         <div id="friends-container">Friends</div>
         <div id="events-container">Events</div>
-        <div id="messages-container">Messages</div>
+        <div id="messages-container"></div>
         <div id="news-container">News</div>
         <div id="toDo-container">ToDo</div>
         <div id="popup-container"></div>
@@ -26,6 +28,9 @@ buildAndAppendUserMainPage: () => {
     `
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
+
+    //APPEND NEW THINGS HERE
+    html.buildandAppendMessagesHTML()
     }
 }
 

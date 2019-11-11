@@ -42,12 +42,12 @@ const forms = {
                 <h1>Log In</h1>
             
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="text" placeholder="Enter Email" name="email" id="loginEmail" required select>
         
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="psw" id="loginPassword" required>
         
-                <button type="submit" class="btn signIn">Log In</button>
+                <button type="submit" class="btn signIn" id="userLogInButton">Log In</button>
             </form>
         </div> 
             `
@@ -79,6 +79,14 @@ getUserInputAndSendToMain() {
     .then(() => data.getUserByEmail(email))
     .then((user) => sessionStorage.setItem("activeUser", user[0].id))
     // sessionStorage.setItem("activeuser", user.id))
+    .then(mainPage.buildAndAppendUserMainPage)
+},
+
+logInUser() {
+    event.preventDefault()
+    const email = document.querySelector("#loginEmail").value
+    const password = document.querySelector("#loginPassword").value
+    getUserByEmail(email).then((user) => sessionStorage.setItem("activeUser", user[0].id))
     .then(mainPage.buildAndAppendUserMainPage)
 }
 }
