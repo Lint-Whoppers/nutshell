@@ -77,7 +77,7 @@ getUserInputAndSendToMain() {
     // THis returns the new USER object from the database.json
     return data.storeNewUser({firstName, lastName, email, password, id})
     .then(() => data.getUserByEmail(email))
-    .then((user) => console.log(user[0].id))
+    .then((user) => sessionStorage.setItem("activeUser", user[0].id))
     // sessionStorage.setItem("activeuser", user.id))
     .then(mainPage.buildAndAppendUserMainPage)
 }
