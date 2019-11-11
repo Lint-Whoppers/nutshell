@@ -1,13 +1,18 @@
-import welcomePageTaco from "./welcomePage/welcomeHtml.js"
+import welcomePage from "./welcomePage/welcomeHtml.js"
 import events from "./welcomePage/eventListener.js";
+import data from "./welcomePage/data.js";
 
+sessionStorage.setItem("userId", 4)
 
-// welcomePageTaco.buildAndAppendWelcomePageHtml();
+// console.log(sessionStorage)
+
+welcomePage.buildAndAppendWelcomePageHtml();
+events.signUpButtonHandler();
+events.logInButtonHandler();
 
 // signUpForm.buildAndAppendSignUpForm();
 
 // events.signUpButtonHandler();
 
-welcomePageTaco.buildAndAppendUserMainPage();
-events.signUpButtonHandler();
-events.logInButtonHandler();
+// welcomePageTaco.buildAndAppendUserMainPage();
+
