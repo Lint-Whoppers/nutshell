@@ -2,6 +2,7 @@ import welcomePage from "./welcomePage/welcomeHtml.js"
 import events from "./welcomePage/eventListener.js";
 import data from "./welcomePage/data.js";
 import tasks from "./tasks/domInjector";
+import mainPage from "./welcomePage/userMainPage.js";
 
 sessionStorage.setItem("userId", 4);
 
@@ -14,4 +15,13 @@ events.logInButtonHandler();
 tasks.makeTaskEntryComponent();
 
 
+const startUpApplication = () => {
+if (sessionStorage.getItem("activeUser") === null) {
+    welcomePage.buildAndAppendWelcomePageHtml();
+    events.signUpButtonHandler();
+    events.logInFormButtonHandler();
+} else
+    {mainPage.buildAndAppendUserMainPage()}
+}
 
+startUpApplication()

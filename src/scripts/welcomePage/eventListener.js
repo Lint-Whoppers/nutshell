@@ -20,13 +20,20 @@ const events = {            //  Declare object and create method
     })
 },
 
-    logInButtonHandler () {
+    logInFormButtonHandler () {
     const logInButton = document.querySelector("#logInButton")
     logInButton.addEventListener("click", () => {
         forms.buildAndAppendLogInForm()
         document.querySelector(".logInForm-popup").style.display = "block"
     })
-}
+},
+
+    userLogInButtonHandler () {
+        const userLogInButton = document.querySelector("#userLogInButton")
+        userLogInButton.addEventListener("click", () => {
+            forms.logInUser();
+        })
+    }
 
 }
 
