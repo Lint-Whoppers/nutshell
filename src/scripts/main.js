@@ -1,7 +1,7 @@
 import welcomePage from "./welcomePage/welcomeHtml.js"
 import events from "./welcomePage/eventListener.js";
 import data from "./welcomePage/data.js";
-import tasks from "./tasks/form.js";
+import tasks from "./tasks/tasksForm.js";
 import mainPage from "./welcomePage/userMainPage.js";
 
 // sessionStorage.setItem("userId", 4);

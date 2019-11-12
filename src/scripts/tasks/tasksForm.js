@@ -17,7 +17,7 @@ buildAndAppendTaskContainer: () => {
       
       
       <button id="addTaskButton" class="addBtn"
-      id="addTaskButton">Add Task</button>
+      >Add Task</button>
       </div>
     </fieldset>
     `
@@ -30,7 +30,7 @@ taskPageContainer.innerHTML = taskContainerHtml;
 // This allows me to grab the data from inputs and save it
 getTaskAndSendToDisplay() {
   const taskName = document.querySelector("taskNameInput").value
-  return randomTaskData.storeNewTask({task})
+  return randomTaskData.storeNewTask({taskName})
 }
 }
 

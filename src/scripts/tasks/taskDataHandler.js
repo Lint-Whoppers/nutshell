@@ -1,4 +1,4 @@
-// This will be a variable for my URL API call 
+// This will be a variable for my URL API call
 // const taskAPI = "";
 
 
@@ -8,9 +8,9 @@ const randomTask = {
     
     
     
-    //post This will be my post for creating a new object in my database by clicking the button this function shoudl run and then it should post on the dom after. This function is the actual post method.
+//post This will be my post for creating a new object in my database by clicking the button this function shoudl run and then it should post on the dom after. This function is the actual post method.
     
-    storeNewTask(newTaskObject) {
+storeNewTask(newTaskObject) {
         return fetch("http://localhost:8088/tasks", {
             method: "POST",
             headers: {
