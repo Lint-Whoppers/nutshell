@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import eventCalendar from "../events/form.js"
-import html from "../messages/htmlMaker"
-=======
 import messagesHtml from "../messages/htmlMaker"
 import messagesData from "../messages/data"
->>>>>>> master
 
 // This file is responsible for building the main page after user logs in
 
@@ -35,16 +31,11 @@ buildAndAppendUserMainPage: () => {
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
 
-<<<<<<< HEAD
     // event
     eventCalendar.buildAndAppendEventCalendar()
-    //APPEND NEW THINGS HERE
-    html.buildandAppendMessagesHTML()
-=======
     //COMPONENT-BUILDING FUNCTIONS GO HERE
     messagesHtml.buildAndAppendMessagesHTML()
     messagesData.getAllMessages()
->>>>>>> master
     }
 }
 
