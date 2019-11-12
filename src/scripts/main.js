@@ -1,7 +1,9 @@
 import welcomePage from "./welcomePage/welcomeHtml.js"
 import events from "./welcomePage/eventListener.js";
 import data from "./welcomePage/data.js";
-import mainPage from "./welcomePage/userMainPage.js";
+import eventsCalendar from "./events/events.js"
+import mainPage from "./welcomePage/userMainPage.js"
+
 
 
 const startUpApplication = () => {
@@ -12,5 +14,6 @@ if (sessionStorage.getItem("activeUser") === null) {
 } else
     {mainPage.buildAndAppendUserMainPage()}
 }
+
 
 startUpApplication()
