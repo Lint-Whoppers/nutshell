@@ -1,4 +1,5 @@
-import html from "../messages/htmlMaker"
+import messagesHtml from "../messages/htmlMaker"
+import messagesData from "../messages/data"
 
 // This file is responsible for building the main page after user logs in
 
@@ -29,8 +30,9 @@ buildAndAppendUserMainPage: () => {
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
 
-    //APPEND NEW THINGS HERE
-    html.buildandAppendMessagesHTML()
+    //COMPONENT-BUILDING FUNCTIONS GO HERE
+    messagesHtml.buildAndAppendMessagesHTML()
+    messagesData.getAllMessages()
     }
 }
 
