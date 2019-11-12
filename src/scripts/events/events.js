@@ -1,14 +1,9 @@
-mobiscroll.settings = {
-    theme: 'mobiscroll'
-};
+import form from "../events/form.js"
+import data from "../events/data.js"
 
-mobiscroll.calendar('#demo-mobile', {
-    display: 'bubble'
-});
+data.API.getEvent().then((event) => data.render.renderJournalEntry(event))
 
-mobiscroll.calendar('#demo-desktop', {
-    display: 'bubble',
-    touchUi: false
-});
+// renderJournalEntries.renderJournalEntries()
+form.eventCalendar.addEventListeneeEventButton()
 
-
+data.API.getAllEvents().then(render)

@@ -11,11 +11,21 @@ sessionStorage.setItem("userId", 4);
 welcomePage.buildAndAppendWelcomePageHtml();
 events.signUpButtonHandler();
 events.logInButtonHandler();
+import mainPage from "./welcomePage/userMainPage.js";
+
+
+const startUpApplication = () => {
+if (sessionStorage.getItem("activeUser") === null) {
+    welcomePage.buildAndAppendWelcomePageHtml();
+    events.signUpButtonHandler();
+    events.logInFormButtonHandler();
+} else
+    {mainPage.buildAndAppendUserMainPage()}
+}
 
 
 
 
 
 
-
-
+startUpApplication()
