@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import html from "../messages/htmlMaker"
 import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
-=======
 import messagesHtml from "../messages/htmlMaker"
 import messagesData from "../messages/data"
->>>>>>> master
 
 // This file is responsible for building the main page after user logs in
 
@@ -35,10 +32,8 @@ buildAndAppendUserMainPage: () => {
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
 
-    //APPEND NEW THINGS HERE
-    html.buildandAppendMessagesHTML()
-    newsHtmlLayout.buildAndAppendNewsSectionHtml()
     //COMPONENT-BUILDING FUNCTIONS GO HERE
+    newsHtmlLayout.buildAndAppendNewsSectionHtml()
     messagesHtml.buildAndAppendMessagesHTML()
     messagesData.getAllMessages()
     }
