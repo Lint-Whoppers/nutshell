@@ -1,6 +1,5 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
-    text-align: center;
     font-weight: normal;
     margin: 0;
 }
@@ -42,6 +41,10 @@ button:hover {
 
 .hyperlink:hover {
     cursor: pointer;
+}
+
+#welcome-page {
+  text-align: center
 }
 
 ul.topnav {
@@ -87,6 +90,7 @@ ul.topnav img.left {
     margin-left: 25%;
     margin-right:25%;
     border: 3px solid #f1f1f1;
+    text-align: center;
   }
 
   .logInForm-popup {
@@ -94,6 +98,7 @@ ul.topnav img.left {
     margin-left: 25%;
     margin-right:25%;
     border: 3px solid #f1f1f1;
+    text-align: center;
   }
 
 /* Add styles to the form container */
@@ -134,4 +139,31 @@ ul.topnav img.left {
     border-color: #111;
     border-width: 5px;
   }
+
+.messageInput {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label.messageLabel {
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+#messages-container {
+  border: 1px solid #d0d0d0;
+}
+
+#messagesTitle {
+  text-align: center;
+}
+
+#newMessageSubmitButton {
+  margin-left: 5%;
+  height: 25px;
+  width: 60px;
+  font-size: 13px;
+}
 

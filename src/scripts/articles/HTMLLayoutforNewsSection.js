@@ -6,6 +6,8 @@ const newsHtmlLayout = {
     <button id = "new-article-button">New Article</button>
 
     `
+    const welcomePageContainer = document.querySelector("#news-container")
+    welcomePageContainer.innerHTML = welcomeHtml
 
     }
 }

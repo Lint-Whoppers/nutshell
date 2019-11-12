@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import html from "../messages/htmlMaker"
 import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
+=======
+import messagesHtml from "../messages/htmlMaker"
+import messagesData from "../messages/data"
+>>>>>>> master
 
 // This file is responsible for building the main page after user logs in
 
@@ -33,6 +38,9 @@ buildAndAppendUserMainPage: () => {
     //APPEND NEW THINGS HERE
     html.buildandAppendMessagesHTML()
     newsHtmlLayout.buildAndAppendNewsSectionHtml()
+    //COMPONENT-BUILDING FUNCTIONS GO HERE
+    messagesHtml.buildAndAppendMessagesHTML()
+    messagesData.getAllMessages()
     }
 }
 
