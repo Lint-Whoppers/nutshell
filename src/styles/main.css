@@ -135,3 +135,13 @@ ul.topnav img.left {
     border-width: 5px;
   }
 
+
+
+/* events */
+.md-event-list-agenda {
+  min-height: 100%;
+}
+
+.md-event-list-agenda-contmbsc-page > .mbsc-page {
+  height: 100%;
+}
