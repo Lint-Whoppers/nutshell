@@ -43,6 +43,10 @@ button:hover {
     cursor: pointer;
 }
 
+#welcome-page {
+  text-align: center
+}
+
 ul.topnav {
   list-style-type: none;
   margin: 0;
