@@ -9,7 +9,7 @@ const eventCalendar = {
                     <input type="text" name="nameOfEvent" id="nameOfEvent">
                 </fieldset>
                 <fieldset class="form-fieldset">
-                    <label id="date" for="eventDate">Date of Evetn</label>
+                    <label id="date" for="eventDate">Date of Event</label>
                     <input type="date" name="eventDate" id="eventDate">
                 </fieldset>
                 <fieldset class="form-fieldset">
@@ -36,30 +36,8 @@ const eventCalendar = {
         <button id="deleteEntry--${eventEntry.id}">Delete Event</button>
       </section>
     `
-    },
-    render: {
-        renderEvent: (events) => {
-            let HtmlForAllEvents = ""
-            events.forEach(event => {
-                const eventHtml = make.makeJournalEntryComponent(event)
-                HtmlForAllEvents += eventHtml
-            })
-            const logArticle = document.querySelector(".eventLog")
-            logArticle.innerHTML = HtmlForAllEvents
-        }
-    },
-    addEventListeneeEventButton: () => {
-        document.querySelector("#addEventButton").addEventListener("click", e => {
-            const date = document.querySelector("#eventDate").value
-            const name = document.querySelector("#eventName").value
-            const location = document.querySelector("#eventLocation").value
-
-            //save event entry (json-server returns it) then render it
-            data.API.saveEvent({ date, name, location })
-                .then(data.API.getEvent)
-                .then(response => render.renderEvent(response))
-        })
     }
+    
 }
 
 export default eventCalendar
