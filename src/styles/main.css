@@ -140,18 +140,6 @@ ul.topnav img.left {
     border-width: 5px;
   }
 
-<<<<<<< HEAD
-
-
-/* events */
-.md-event-list-agenda {
-  min-height: 100%;
-}
-
-.md-event-list-agenda-contmbsc-page > .mbsc-page {
-  height: 100%;
-}
-=======
 .messageInput {
   display: block;
   width: 90%;
@@ -179,4 +167,3 @@ label.messageLabel {
   font-size: 13px;
 }
 
->>>>>>> master
