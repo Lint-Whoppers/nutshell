@@ -4,7 +4,6 @@ const messagesData = {
     getAllMessages() {
         return fetch("http://localhost:8088/messages")
             .then(response => response.json())
-            .then(response => console.log(response.json))
     }
 }
 

@@ -1,5 +1,5 @@
-import messagesHtml from "../messages/htmlMaker"
-import messagesData from "../messages/data"
+import messagesHtml from "../messages/htmlMaker.js"
+import messagesData from "../messages/data.js"
 
 // This file is responsible for building the main page after user logs in
 
@@ -32,7 +32,7 @@ buildAndAppendUserMainPage: () => {
 
     //COMPONENT-BUILDING FUNCTIONS GO HERE
     messagesHtml.buildAndAppendMessagesHTML()
-    messagesData.getAllMessages()
+    messagesData.getAllMessages().then(response => console.log(response))
     }
 }
 
