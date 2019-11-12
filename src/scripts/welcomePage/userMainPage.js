@@ -1,4 +1,5 @@
 import html from "../messages/htmlMaker"
+import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
 
 // This file is responsible for building the main page after user logs in
 
@@ -31,6 +32,7 @@ buildAndAppendUserMainPage: () => {
 
     //APPEND NEW THINGS HERE
     html.buildandAppendMessagesHTML()
+    newsHtmlLayout.buildAndAppendNewsSectionHtml()
     }
 }
 
