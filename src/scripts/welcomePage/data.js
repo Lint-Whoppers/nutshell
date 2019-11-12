@@ -32,4 +32,4 @@ getUserByEmail(email) {
 }
 
 
-export default data
+export default data;
