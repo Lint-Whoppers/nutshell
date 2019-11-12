@@ -1,11 +1,14 @@
+
+
 // THis will be a function that allows me to create new dom elements for my portion of the UserMainPage
 
 const taskEntryManager = {
-    makeTaskEntryComponent: () => {
-const toDoListHtml = `
-<div id="myDIV" class="header">
-  <h2>My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
+    makeTaskEntryComponent() {
+return `
+<fieldset>
+<div id="toDo-container" class="header">
+  <h2>ToDo List</h2>
+  <input type="text" id="myInput" placeholder="ToDo">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
@@ -17,10 +20,9 @@ const toDoListHtml = `
   <li>Read a book</li>
   <li>Organize office</li>
 </ul>
-    `
-    const toDoHtmlContainer = document.querySelector("#toDo-container");
-    toDoHtmlContainer.innerHTML = toDoListHtml
-    }
+</fieldset>
+   `
+  },
 }
 
 export default taskEntryManager;
