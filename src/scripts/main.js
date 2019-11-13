@@ -7,6 +7,8 @@ import eventCalendar from "./events/formHtml.js"
 import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
 import messagesHtml from "./messages/htmlMaker"
 import messagesData from "./messages/data"
+import render from "./events/domRender.js"
+import data from "./events/data.js"
 
 
 const startUpApplication = () => {
@@ -23,6 +25,7 @@ const startUpApplication = () => {
         messagesHtml.buildAndAppendMessagesHTML()
         messagesData.getAllMessages()
         eventCalendar.buildAndAppendEventCalendar()
+        data.getAllEvents().then(response => render.renderEvent(response))
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()

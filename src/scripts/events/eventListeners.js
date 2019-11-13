@@ -1,4 +1,5 @@
 import data from "../events/data.js"
+import render from "../events/domRender.js"
 
 export default {
     addEventListenerToAddEventButton: () => {
@@ -13,7 +14,7 @@ export default {
             data.saveEventEntry({ name, date, location, userId})
             
             .then(data.getAllEvents)
-            // .then(response => render.render.renderJournalEntry(response))
+            .then(response => render.renderEvent(response))
 
         })
     },
