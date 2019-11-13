@@ -1,5 +1,5 @@
 import randomTaskData from "./taskDataHandler.js";
-
+import taskEvents from "./taskEventListeners.js";
 // import mainPage from "./welcomePage/userMainPage.js";
 
 const taskRender = {
@@ -30,8 +30,9 @@ taskPageContainer.innerHTML = taskContainerHtml;
 // This allows me to grab the data from inputs and save it
 getTaskAndSendToDisplay() {
   const taskName = document.querySelector("taskNameInput").value
-  return randomTaskData.getTaskAndSendToDisplay(taskName)
+  randomTaskData.getTaskAndSendToDisplay(taskName)
 }
+
 }
 
 

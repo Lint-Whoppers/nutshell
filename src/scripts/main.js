@@ -19,10 +19,12 @@ const startUpApplication = () => {
         events.signUpButtonHandler();
         events.logInFormButtonHandler();
     } else {
-        mainPage.buildAndAppendUserMainPage()
+        // Build Components Here
+        mainPage.buildAndAppendUserMainPage();
         tasks.buildAndAppendTaskContainer();
-    }
+        // Add Event Listeners Here
+        taskEvents.createTaskButtonHandler();
+    } 
 }
-
 
 startUpApplication()
