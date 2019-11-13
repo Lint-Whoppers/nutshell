@@ -1,0 +1,140 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Peter",
+      "lastName": "Salami",
+      "email": "test123@gmail.com",
+      "password": 123
+    },
+    {
+      "firstName": "Danny",
+      "lastName": "Dinosaur",
+      "email": "danny@ilovedinosaurs.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "firstName": "Val",
+      "lastName": "Valentino",
+      "email": "val@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "firstName": "Poopy",
+      "lastName": "Pooper",
+      "email": "poop@ilovepoop.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "sam@sammy.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "sam@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "firstName": "Marty",
+      "lastName": "McFly",
+      "email": "marty@hoverboardsUSA.com",
+      "password": "future",
+      "id": 7
+    },
+    {
+      "firstName": "Gary",
+      "lastName": "Snail",
+      "email": "garylovesspongebob@gmail.com",
+      "password": "snail",
+      "id": 8
+    },
+    {
+      "firstName": "sam",
+      "lastName": "summer",
+      "email": "sam@summer.com",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "firstName": "sam",
+      "lastName": "pita",
+      "email": "asd",
+      "password": "asd",
+      "id": 10
+    },
+    {
+      "firstName": "hello",
+      "lastName": "goodbye",
+      "email": "sam@sam.com",
+      "password": "1234",
+      "id": 11
+    },
+    {
+      "firstName": "Hello",
+      "lastName": "goodbye",
+      "email": "asdfdsklj@gmail.com",
+      "password": "123",
+      "id": 12
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "sam@sam.com",
+      "password": "1234",
+      "id": 13
+    },
+    {
+      "firstName": "sam",
+      "lastName": "pita",
+      "email": "samasama123@gmail.com",
+      "password": "1234",
+      "id": 14
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Rocks",
+      "email": "samrocks@gmail.com",
+      "password": "123",
+      "id": 15
+    }
+  ],
+  "articles": [],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 14,
+      "message": "This is my first message!",
+      "timestamp": "1996-12-19T16:39:57-08:00"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "message": "We have a partial snow day today-- SWEET BRO.",
+      "timestamp": "2019-11-12T16:39:57-08:00"
+    }
+  ],
+  "events": [
+    {
+      "name": "PartyTimeExcellent",
+      "date": "2019-11-13",
+      "location": "ERRYWHERE",
+      "id": 1
+    },
+    {
+      "name": "SamRocks",
+      "date": "31023-12-09",
+      "location": "M HOUSE",
+      "id": 2
+    }
+  ],
+  "tasks": [],
+  "friends": []
+}
