@@ -1,13 +1,32 @@
-import eventCalendar from "../events/formHtml.js"
+import data from "../events/data.js"
+import render from "../events/domRender.js"
 
 export default {
     addEventListenerToAddEventButton: () => {
         document.querySelector("#addEventButton").addEventListener("click", e => {
+            console.log("click")
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
-            console.log(click)
+            const userId = sessionStorage.getItem("activeUser")
+            
+            //save journal entry (json-server returns it) then render it
+            data.saveEventEntry({ name, date, location, userId})
+            
+            .then(data.getAllEvents)
+            .then(response => render.renderEvent(response))
 
         })
+    },
+    makeEventComponent: (eventEntry) => {
+        return `
+            <section>
+                <h3>${eventEntry.name}</h3>
+                <p>${eventEntry.date}</p>
+                <p>${eventEntry.location}</p>
+                <button id="editEntry--${eventEntry.id}">Edit Event</button>
+                <button id="deleteEntry--${eventEntry.id}">Delete Event</button>
+            </section>
+            `
     }
 }

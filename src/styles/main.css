@@ -118,12 +118,14 @@ ul.topnav img.left {
     background: #f1f1f1;
   }
 
-  #popup-container {
+#popup-container {
       margin-bottom: 10%;
   }
 /* Main Page Styling */
 #main-page {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*footer styling*/
@@ -140,9 +142,15 @@ ul.topnav img.left {
     border-width: 5px;
   }
 
+#messageBoard {
+  width: 100%;
+  height: px;
+  overflow: scroll;
+}
+
 .messageInput {
   display: block;
-  width: 90%;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -152,12 +160,23 @@ label.messageLabel {
   margin-left: 5%;
 }
 
-#messages-container, #news-container{
-  border: 1px solid #d0d0d0;
+.messageElement {
+font-size: 14px;
 }
 
-#messagesTitle {
+#messages-container, #news-container{
+  border: 1px solid #d0d0d0;
+  height: 90%;
+}
+
+.componentTitle {
   text-align: center;
+  height: 15px;
+  margin: none;
+  padding: none;
+}
+#newMessage {
+  display: flex;
 }
 
 #newMessageSubmitButton {

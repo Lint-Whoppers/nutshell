@@ -7,8 +7,15 @@ import eventCalendar from "./events/formHtml.js"
 import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
 import messagesHtml from "./messages/htmlMaker"
 import messagesData from "./messages/data"
+<<<<<<< HEAD
 import newsEventListeners from "./articles/eventListeners"
 
+=======
+import render from "./events/domRender.js"
+import data from "./events/data.js"
+import dom from "./messages/domRenderer.js";
+import taskEvents from "./tasks/taskEventListeners.js";
+>>>>>>> master
 
 const startUpApplication = () => {
     if (sessionStorage.getItem("activeUser") === null) {
@@ -21,16 +28,21 @@ const startUpApplication = () => {
         //COMPONENT-BUILDING FUNCTIONS GO HERE
         tasks.buildAndAppendTaskContainer();
         newsHtmlLayout.buildAndAppendNewsSectionHtml()
-        messagesHtml.buildAndAppendMessagesHTML()
-        messagesData.getAllMessages()
+        messagesHtml.buildMessagesHTML()
+        dom.renderMessagesContainerToDom()
+        messagesData.getAllMessages().then(messages => dom.renderAllMessagesToDom(messages))
         eventCalendar.buildAndAppendEventCalendar()
+        data.getAllEvents().then(response => render.renderEvent(response))
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
+<<<<<<< HEAD
         newsEventListeners.clickNewArticleHandler()
+=======
+        taskEvents.createTaskButtonHandler()
+>>>>>>> master
     }
 }
-
 
 startUpApplication()
 
