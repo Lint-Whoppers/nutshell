@@ -8,7 +8,7 @@ import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
 import messagesHtml from "./messages/htmlMaker"
 import messagesData from "./messages/data"
 import dom from "./messages/domRenderer.js";
-
+import taskEvents from "./tasks/taskEventListeners.js";
 
 const startUpApplication = () => {
     if (sessionStorage.getItem("activeUser") === null) {
@@ -28,9 +28,9 @@ const startUpApplication = () => {
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
+        taskEvents.createTaskButtonHandler()
     }
 }
-
 
 startUpApplication()
 
