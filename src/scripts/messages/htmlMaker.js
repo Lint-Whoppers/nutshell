@@ -8,9 +8,9 @@ buildMessagesHTML() {
     <h3 class="componentTitle" id="messagesTitle">Messages<h3>
     <section id="messageBoard">
     </section>
+    <label class="messageLabel">Compose New Message</label>
     <section id="newMessage">
-    <label class="messageLabel">Message</label>
-    <textarea cols="40" rows="2" class="messageInput" id="newMessageTextInput"></textarea>
+    <textarea cols="40" rows="4" class="messageInput" id="newMessageTextInput"></textarea>
     <button type="button" id="newMessageSubmitButton">Submit</button>
     </section>
     `
