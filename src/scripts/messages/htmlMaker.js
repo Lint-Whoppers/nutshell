@@ -1,24 +1,31 @@
+import messagesData from "./data.js"
+
 // Purpose: This file generates the HTML in the Messages component. Author: Sam Pita
 
-const html = {
-buildAndAppendMessagesHTML() {
-    const messagesHTML = `
-    <h3 id="messagesTitle">Messages<h3>
+const messagesHtml = {
+buildMessagesHTML() {
+    return `
+    <h3 class="componentTitle" id="messagesTitle">Messages<h3>
     <section id="messageBoard">
     </section>
+    <label class="messageLabel">Compose New Message</label>
     <section id="newMessage">
-    <label class="messageLabel">Date / Time</label>
-    <input type="datetime-local" class="messageInput" id="newMessageDateTime">
-    <label class="messageLabel">Message</label>
-    <textarea cols="40" rows="5" class="messageInput" id="newMessageTextInput"></textarea>
+    <textarea cols="40" rows="4" class="messageInput" id="newMessageTextInput"></textarea>
     <button type="button" id="newMessageSubmitButton">Submit</button>
     </section>
     `
-    const messagesContainer = document.querySelector("#messages-container")
-    messagesContainer.innerHTML = messagesHTML
+    },
+
+createMessageElementHTML(message) {
+    return `
+    <article class="messageElement" id="message--${message.id}">
+    <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
+    <p>${message.message}</p>
+    <p>${message.timestamp}</p>
+    </article>
+    `
+    }
+
 }
 
-
-}
-
-export default html
+export default messagesHtml
