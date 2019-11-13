@@ -11,12 +11,15 @@ buildAndAppendUserMainPage: () => {
         <li><a href="#contact">Contact</a></li>
     </ul>
     </nav>
-    <h1>Otter</h1>
     <div id="main-page">
+        <section id="left-container">
         <div id="friends-container">Friends</div>
         <div id="events-container">Events</div>
+        </section>
+        <section id="center-container">
         <div id="messages-container"></div>
         <div id="news-container">News</div>
+        </section>
         <div id="toDo-container">ToDo</div>
         <div id="popup-container"></div>
     </div>

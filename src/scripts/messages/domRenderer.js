@@ -11,13 +11,9 @@ renderMessagesContainerToDom() {
 
 renderAllMessagesToDom(messages) {
     const messageBoard = document.querySelector("#messageBoard")
-
-    messagesData.getAllMessages()
-    
     messages.forEach(message => {
-        let messageElementHTML = messagesHTML.createMessageElement(messages)
-        messageBoard.appendChild(messageElementHTML)
-        // const messagesFromApi = document.createElement("article")
+        const messageElementHTML = messagesHtml.createMessageElementHTML(message)
+        messageBoard.innerHTML += messageElementHTML
     })
     }
 }

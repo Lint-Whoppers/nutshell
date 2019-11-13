@@ -19,7 +19,6 @@ storeNewUser(newUserObject) {
         body: JSON.stringify(newUserObject)
     })
         .then(users => users.json())
-        // .then(console.log(newUserObject))
     },
 
 // This is a new function inside the data export that is going to be used as our get request or get all for reference specifically on login.

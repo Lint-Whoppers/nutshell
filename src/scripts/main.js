@@ -23,6 +23,7 @@ const startUpApplication = () => {
         newsHtmlLayout.buildAndAppendNewsSectionHtml()
         messagesHtml.buildMessagesHTML()
         dom.renderMessagesContainerToDom()
+        messagesData.getAllMessages().then(messages => dom.renderAllMessagesToDom(messages))
         eventCalendar.buildAndAppendEventCalendar()
         
         // EVENT LISTENERS GO HERE

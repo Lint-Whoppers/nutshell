@@ -5,24 +5,25 @@ import messagesData from "./data.js"
 const messagesHtml = {
 buildMessagesHTML() {
     return `
-    <h3 id="messagesTitle">Messages<h3>
+    <h3 class="componentTitle" id="messagesTitle">Messages<h3>
     <section id="messageBoard">
     </section>
     <section id="newMessage">
-    <label class="messageLabel">Date / Time</label>
-    <input type="datetime-local" class="messageInput" id="newMessageDateTime">
     <label class="messageLabel">Message</label>
-    <textarea cols="40" rows="5" class="messageInput" id="newMessageTextInput"></textarea>
+    <textarea cols="40" rows="2" class="messageInput" id="newMessageTextInput"></textarea>
     <button type="button" id="newMessageSubmitButton">Submit</button>
     </section>
     `
     },
 
-    createMessageElement(message) {
-        return `
-        <article id="message--${message.id}">
-        <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
-        `
+createMessageElementHTML(message) {
+    return `
+    <article class="messageElement" id="message--${message.id}">
+    <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
+    <p>${message.message}</p>
+    <p>${message.timestamp}</p>
+    </article>
+    `
     }
 
 }
