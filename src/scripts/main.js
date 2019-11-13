@@ -4,7 +4,7 @@ import data from "./welcomePage/data.js";
 import tasks from "./tasks/tasksForm.js";
 import mainPage from "./welcomePage/userMainPage.js";
 import eventsCalendar from "./events/events.js"
-import mainPage from "./welcomePage/userMainPage.js"
+
 
 
 // sessionStorage.setItem("userId", 4);

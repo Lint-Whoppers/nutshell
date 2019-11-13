@@ -30,7 +30,7 @@ taskPageContainer.innerHTML = taskContainerHtml;
 // This allows me to grab the data from inputs and save it
 getTaskAndSendToDisplay() {
   const taskName = document.querySelector("taskNameInput").value
-  return randomTaskData.storeNewTask({taskName})
+  return randomTaskData.getTaskAndSendToDisplay(taskName)
 }
 }
 
