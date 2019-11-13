@@ -7,7 +7,7 @@ import eventCalendar from "./events/formHtml.js"
 import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
 import messagesHtml from "./messages/htmlMaker"
 import messagesData from "./messages/data"
-
+import taskEvents from "./tasks/taskEventListeners.js";
 
 const startUpApplication = () => {
     if (sessionStorage.getItem("activeUser") === null) {
@@ -26,6 +26,7 @@ const startUpApplication = () => {
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
+        taskEvents.createTaskButtonHandler()
     }
 }
 

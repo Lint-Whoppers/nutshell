@@ -1,5 +1,5 @@
 import randomTaskData from "./taskDataHandler.js";
-import taskEvents from "./taskEventListeners.js";
+
 // import mainPage from "./welcomePage/userMainPage.js";
 
 const taskRender = {
@@ -8,7 +8,7 @@ buildAndAppendTaskContainer: () => {
     <fieldset clas=""form-container">
     <div id="toDoListContainer" class="taskForm-popup">
       <h2>ToDo List</h2>
-      <input type="text" id="Input" placeholder="ToDo">
+      <input type="text" id="taskInputField" placeholder="ToDo">
       
       
       <label for="taskName"><b>Task Name</b></label>
