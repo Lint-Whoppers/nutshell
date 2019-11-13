@@ -1,8 +1,3 @@
-import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection.js"
-import eventCalendar from "../events/form.js"
-import messagesHtml from "../messages/htmlMaker.js"
-import dom from "../messages/domRenderer.js"
-
 // This file is responsible for building the main page after user logs in
 
 // This should be the injector for the next page call
@@ -31,16 +26,7 @@ buildAndAppendUserMainPage: () => {
     `
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
-
-    // event
-    eventCalendar.buildAndAppendEventCalendar()
-    //COMPONENT-BUILDING FUNCTIONS GO HERE
-    newsHtmlLayout.buildAndAppendNewsSectionHtml()
-    messagesHtml.buildMessagesHTML()
-    dom.renderMessagesContainerToDom()
-    
     }
 }
-
 
 export default mainPage

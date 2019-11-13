@@ -16,7 +16,14 @@ buildMessagesHTML() {
     <button type="button" id="newMessageSubmitButton">Submit</button>
     </section>
     `
-}
+    },
+
+    createMessageElement(message) {
+        return `
+        <article id="message--${message.id}">
+        <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
+        `
+    }
 
 }
 

@@ -1,23 +1,23 @@
 import messagesHtml from "./htmlMaker.js"
-
+import messagesData from "./data.js"
 //Purpose: This file injects components onto the DOM. Author: Sam Pita
 
 const dom = {
 renderMessagesContainerToDom() {
     const messagesContainer = document.querySelector("#messages-container")
     const messagesHTML = messagesHtml.buildMessagesHTML()
-    console.log(messagesHTML)
     messagesContainer.innerHTML = messagesHTML
     },
 
 renderAllMessagesToDom(messages) {
     const messageBoard = document.querySelector("#messageBoard")
 
+    messagesData.getAllMessages()
+    
     messages.forEach(message => {
-        let contactElementHTML = contactElement.createContactElement(contact)
-        listContainer.innerHTML += contactElementHTML
+        let messageElementHTML = messagesHTML.createMessageElement(messages)
+        messageBoard.appendChild(messageElementHTML)
         // const messagesFromApi = document.createElement("article")
-        messagesData.getAllMessages().then(response => console.log(response))
     })
     }
 }
