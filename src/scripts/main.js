@@ -3,6 +3,7 @@ import events from "./welcomePage/eventListener.js";
 import data from "./welcomePage/data.js";
 import eventsCalendar from "./events/events.js"
 import mainPage from "./welcomePage/userMainPage.js"
+import eventListener from "./events/eventListeners"
 
 
 
@@ -17,3 +18,5 @@ if (sessionStorage.getItem("activeUser") === null) {
 
 
 startUpApplication()
+
+eventListener.addEventListenerToAddEventButton()
