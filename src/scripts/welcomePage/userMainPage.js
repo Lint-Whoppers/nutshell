@@ -33,8 +33,7 @@ buildAndAppendUserMainPage: () => {
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
 
-    // event
-    eventCalendar.buildAndAppendEventCalendar()
+    
     //COMPONENT-BUILDING FUNCTIONS GO HERE
     newsHtmlLayout.buildAndAppendNewsSectionHtml()
     messagesHtml.buildAndAppendMessagesHTML()
