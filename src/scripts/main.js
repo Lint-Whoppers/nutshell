@@ -1,16 +1,12 @@
 import welcomePage from "./welcomePage/welcomeHtml.js"
 import events from "./welcomePage/eventListener.js";
-import data from "./welcomePage/data.js";
 import tasks from "./tasks/tasksForm.js";
 import mainPage from "./welcomePage/userMainPage.js";
-import eventsCalendar from "./events/events.js"
-
-
-
-// sessionStorage.setItem("userId", 4);
-// welcomePage.buildAndAppendWelcomePageHtml();
-// events.signUpButtonHandler();
-// events.logInFormButtonHandler();
+import eventListener from "./events/eventListeners"
+import eventCalendar from "./events/formHtml.js"
+import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
+import messagesHtml from "./messages/htmlMaker"
+import messagesData from "./messages/data"
 
 
 const startUpApplication = () => {
@@ -19,12 +15,19 @@ const startUpApplication = () => {
         events.signUpButtonHandler();
         events.logInFormButtonHandler();
     } else {
-        // Build Components Here
-        mainPage.buildAndAppendUserMainPage();
+        mainPage.buildAndAppendUserMainPage()
+
+        //COMPONENT-BUILDING FUNCTIONS GO HERE
         tasks.buildAndAppendTaskContainer();
-        // Add Event Listeners Here
-        taskEvents.createTaskButtonHandler();
-    } 
+        newsHtmlLayout.buildAndAppendNewsSectionHtml()
+        messagesHtml.buildAndAppendMessagesHTML()
+        messagesData.getAllMessages()
+        eventCalendar.buildAndAppendEventCalendar()
+        
+        // EVENT LISTENERS GO HERE
+        eventListener.addEventListenerToAddEventButton()
+    }
 }
 
 startUpApplication()
+
