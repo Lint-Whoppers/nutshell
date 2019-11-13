@@ -18,7 +18,11 @@ buildAndAppendUserMainPage: () => {
         </section>
         <section id="center-container">
         <div id="messages-container"></div>
-        <div id="news-container">News</div>
+        <div id="news-container">
+        News
+            <div id="news-popup-container">
+            </div>
+        </div>
         </section>
         <div id="toDo-container">ToDo</div>
         <div id="popup-container"></div>

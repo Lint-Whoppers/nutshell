@@ -1,3 +1,5 @@
+
+
 //*** PURPOSE: TO HOST ALL EVENT LISTENERS FOR THE NEWS SECTION ***
 
 
@@ -9,7 +11,7 @@ const newsEventListeners = {
     clickNewArticleHandler: () => {
         const clickNewArticleButton = document.querySelector("#new-article-button")
         clickNewArticleButton.addEventListener("click", () => {
-            console.log("The New Article Button has been clizzicked!!")
+            document.querySelector("#newArticleContainer").style.display = "block"
         })
 
     }

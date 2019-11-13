@@ -1,3 +1,5 @@
+import newsFormsObject from "./form.js"
+
 const newsHtmlLayout = {
     buildAndAppendNewsSectionHtml() {
         const newsHtml = `
@@ -11,6 +13,7 @@ const newsHtmlLayout = {
     `
         const newsContainer = document.querySelector("#news-container")
         newsContainer.innerHTML = newsHtml
+        newsFormsObject.buildAndAppendNewArticleForm()
 
     }
 }
