@@ -22,10 +22,10 @@ storeNewTask(newTaskObject) {
     },
     
 // This will be my fetch call initially for my get function and will parse the response into JSON
-getAllTasks(task) {
-    return fetch(`http://localhost:8088/users?task=${task}`)
+getAllTasks() {
+    return fetch("http://localhost:8088/tasks")
         .then(response => response.json())
-
+        .then(response => console.log(response))
     }
 }
 
