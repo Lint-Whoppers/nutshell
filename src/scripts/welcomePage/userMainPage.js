@@ -1,3 +1,5 @@
+import html from "../messages/htmlMaker"
+import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
 import eventCalendar from "../events/form.js"
 import messagesHtml from "../messages/htmlMaker"
 import messagesData from "../messages/data"
@@ -34,6 +36,7 @@ buildAndAppendUserMainPage: () => {
     // event
     eventCalendar.buildAndAppendEventCalendar()
     //COMPONENT-BUILDING FUNCTIONS GO HERE
+    newsHtmlLayout.buildAndAppendNewsSectionHtml()
     messagesHtml.buildAndAppendMessagesHTML()
     messagesData.getAllMessages()
     }
