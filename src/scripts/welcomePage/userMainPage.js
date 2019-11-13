@@ -1,5 +1,6 @@
-import messagesHtml from "../messages/htmlMaker.js"
-import messagesData from "../messages/data.js"
+import eventCalendar from "../events/form.js"
+import messagesHtml from "../messages/htmlMaker"
+import messagesData from "../messages/data"
 
 // This file is responsible for building the main page after user logs in
 
@@ -24,16 +25,19 @@ buildAndAppendUserMainPage: () => {
         <div id="popup-container"></div>
     </div>
     <div class="footer">
-<p>Made By: Charles Jackson, Jeremiah Bell, Michelle Johnson, Sam Pita</p>
-</div>
+        <p>Made By: Charles Jackson, Jeremiah Bell, Michelle Johnson, Sam Pita</p>
+    </div>
     `
     const mainPageContainer = document.querySelector("#page-container")
     mainPageContainer.innerHTML = mainPageHtml
 
+    // event
+    eventCalendar.buildAndAppendEventCalendar()
     //COMPONENT-BUILDING FUNCTIONS GO HERE
     messagesHtml.buildAndAppendMessagesHTML()
     messagesData.getAllMessages().then(response => console.log(response))
     }
 }
+
 
 export default mainPage
