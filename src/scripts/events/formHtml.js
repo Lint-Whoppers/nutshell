@@ -1,9 +1,5 @@
 // author:Michelle Johnson (build form)
 
-import data from "./data.js"
-import { format } from "url"
-
-
 const eventCalendar = {
     buildAndAppendEventCalendar: () => {
         const calendar = `
