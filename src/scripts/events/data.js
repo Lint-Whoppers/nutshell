@@ -12,5 +12,11 @@ export default {
     getAllEvents() {
         return fetch("http://localhost:8088/events")
             .then(response => response.json())
+    },
+    deleteEvent(eventId) {
+        return fetch(`http://localhost:8088/events/${eventId}`, {
+            method: "DELETE"
+        })
+            .then(response => response.json())
     }
 }
