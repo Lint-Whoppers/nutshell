@@ -1,7 +1,6 @@
 import eventCalendar from "../events/formHtml.js"
 import html from "../messages/htmlMaker"
 import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
-import eventCalendar from "../events/form.js"
 import messagesHtml from "../messages/htmlMaker"
 import messagesData from "../messages/data"
 
