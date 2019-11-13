@@ -7,6 +7,7 @@ import eventCalendar from "./events/formHtml.js"
 import newsHtmlLayout from "./articles/HTMLLayoutforNewsSection"
 import messagesHtml from "./messages/htmlMaker"
 import messagesData from "./messages/data"
+import newsEventListeners from "./articles/eventListeners"
 
 
 const startUpApplication = () => {
@@ -26,6 +27,7 @@ const startUpApplication = () => {
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
+        newsEventListeners.clickNewArticleHandler()
     }
 }
 
