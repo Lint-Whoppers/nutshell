@@ -1,16 +1,13 @@
-import eventEntry from "../events/eventListeners.js"
+import make from "../events/eventListeners.js"
 
 export default {
-    render: {
         renderEvent: (events) => {
             let HtmlForAllEvents = ""
             events.forEach(event => {
-                const eventHtml = render.makeEventComponent(event)
+                const eventHtml = make.makeEventComponent(event)
                 HtmlForAllEvents += eventHtml
             })
-            const logArticle = document.querySelector(".entryLog")
+            const logArticle = document.querySelector(".eventLog")
             logArticle.innerHTML = HtmlForAllEvents
-            console.log(render)
         }
-    }
 }

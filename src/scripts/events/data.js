@@ -8,6 +8,9 @@ export default {
             },
             body: JSON.stringify(event)
         })
-        .then(response => response.json())
+    },
+    getAllEvents() {
+        return fetch("http://localhost:8088/events")
+            .then(response => response.json())
     }
 }
