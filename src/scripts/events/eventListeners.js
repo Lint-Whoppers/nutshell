@@ -1,4 +1,4 @@
-import save from "../events/data.js"
+import data from "../events/data.js"
 
 export default {
     addEventListenerToAddEventButton: () => {
@@ -10,9 +10,9 @@ export default {
             const userId = sessionStorage.getItem("activeUser")
             
             //save journal entry (json-server returns it) then render it
-            save.saveEventEntry({ name, date, location, userId})
+            data.saveEventEntry({ name, date, location, userId})
             
-            // .then(API.API.getJournalEntries)
+            .then(data.getAllEvents)
             // .then(response => render.render.renderJournalEntry(response))
 
         })
