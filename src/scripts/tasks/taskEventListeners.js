@@ -5,9 +5,9 @@ const taskEvents = {
     createTaskButtonHandler () {
         const createTaskButton = document.querySelector("#addTaskButton")
         createTaskButton.addEventListener("click", () => {
-            const newTaskObject = document.querySelector("#taskInputField").value;
-            console.log(newTaskObject)
-            // randomTask.storeNewTask(newTaskObject)
+            // const newTaskObject = document.querySelector("#taskInputField").value;
+            // console.log(newTaskObject)
+            taskRender.getTaskAndSendToDisplay()
             // console.log("click")
         })
     },
