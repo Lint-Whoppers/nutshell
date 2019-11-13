@@ -1,8 +1,7 @@
-import html from "../messages/htmlMaker"
-import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection"
+import newsHtmlLayout from "../articles/HTMLLayoutforNewsSection.js"
 import eventCalendar from "../events/form.js"
-import messagesHtml from "../messages/htmlMaker"
-import messagesData from "../messages/data"
+import messagesHtml from "../messages/htmlMaker.js"
+import dom from "../messages/domRenderer.js"
 
 // This file is responsible for building the main page after user logs in
 
@@ -37,8 +36,9 @@ buildAndAppendUserMainPage: () => {
     eventCalendar.buildAndAppendEventCalendar()
     //COMPONENT-BUILDING FUNCTIONS GO HERE
     newsHtmlLayout.buildAndAppendNewsSectionHtml()
-    messagesHtml.buildAndAppendMessagesHTML()
-    messagesData.getAllMessages().then(response => console.log(response))
+    messagesHtml.buildMessagesHTML()
+    dom.renderMessagesContainerToDom()
+    
     }
 }
 

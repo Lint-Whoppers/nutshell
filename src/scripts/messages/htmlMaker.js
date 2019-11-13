@@ -1,8 +1,10 @@
+import messagesData from "./data.js"
+
 // Purpose: This file generates the HTML in the Messages component. Author: Sam Pita
 
-const html = {
-buildAndAppendMessagesHTML() {
-    const messagesHTML = `
+const messagesHtml = {
+buildMessagesHTML() {
+    return `
     <h3 id="messagesTitle">Messages<h3>
     <section id="messageBoard">
     </section>
@@ -14,11 +16,8 @@ buildAndAppendMessagesHTML() {
     <button type="button" id="newMessageSubmitButton">Submit</button>
     </section>
     `
-    const messagesContainer = document.querySelector("#messages-container")
-    messagesContainer.innerHTML = messagesHTML
 }
-
 
 }
 
-export default html
+export default messagesHtml

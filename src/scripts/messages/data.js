@@ -1,4 +1,4 @@
-// Purpose: This file handles all API requests for the Messages component
+// Purpose: This file handles all API requests for the Messages component. Author: Sam Pita
 
 const messagesData = {
     getAllMessages() {
