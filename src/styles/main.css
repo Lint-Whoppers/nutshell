@@ -152,7 +152,7 @@ label.messageLabel {
   margin-left: 5%;
 }
 
-#messages-container {
+#messages-container, #news-container{
   border: 1px solid #d0d0d0;
 }
 
