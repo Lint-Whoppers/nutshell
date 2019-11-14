@@ -29,6 +29,18 @@ const newsEventListeners = {
             .then(API.getAllArticles)
             .then(response => render.renderArticleTaco(response))
         })
+    },
+
+    makeArticleComponent: (articleEntryTaco) => {
+        return `
+            <section>
+                <h3>${articleEntryTaco.newsTitle}</h3>
+                <p>${articleEntryTaco.synopsis}</p>
+                <p>${articleEntryTaco.articleUrl}</p>
+                <button id="editArticle--${articleEntryTaco.id}">Edit Article</button>
+                <button id="deleteArticle--${articleEntryTaco.id}">Delete Article</button>
+            </section>
+            `
     }
 }
 
