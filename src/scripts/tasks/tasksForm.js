@@ -1,4 +1,5 @@
 import randomTaskData from "./taskDataHandler.js";
+import taskEvents from "./taskEventListeners.js";
 
 // import mainPage from "./welcomePage/userMainPage.js";
 
@@ -42,17 +43,24 @@ getTaskAndSendToDisplay() {
   return randomTaskData.storeNewTask({name, date, userId, completed})
 },
 
-displayTasksFunction: (taskEntry) => {
-  return `
-  <article>
-    <h2>${taskEntry.name}</h2>
-    <p>${taskEntry.date}</p>
-    <p>${taskEntry.completed}</p>
-    <button id="editTask--${taskEntry.id}">Edit Task</button>
-    <button id="deleteTask--${taskEntry.id}">Delete Task</button>
-  </article>
-  `
-}
+displayTasksFunction: (taskEntries) => {
+  // This for Each loop allows the computer to understand that my builder needs to go through Each object on the array instead of tring to get all of them and then seperate them. SO if you delete this it will return only undefined.
+  taskEntries.forEach(task => {
+    // I had to refactor this and declare this function as a variable so I could call it properly down the line.
+    const displayTasks = `<article>
+    <h2>${task.name}</h2>
+    <p>${task.date}</p>
+    <p>${task.completed}</p>
+    <button id="editTask--${task.id}">Edit Task</button>
+    <button id="deleteTask--${task.id}">Delete Task</button>
+    </article>
+    `
+    
+    const displayTaskContainer = document.querySelector("#taskDisplay")
+    displayTaskContainer.innerHTML += displayTasks;
+  });// debugger
+    
+  }
 
 }
 
