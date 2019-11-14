@@ -12,8 +12,14 @@ renderMessagesContainerToDom() {
 renderAllMessagesToDom(messages) {
     const messageBoard = document.querySelector("#messageBoard")
     messages.forEach(message => {
-        const messageElementHTML = messagesHtml.createMessageElementHTML(message)
+        const activeUser = sessionStorage.getItem("activeUser")
+        if (activeUser === message.userId) {
+        let messageElementHTML = messagesHtml.createMessageElementHTML(message)
         messageBoard.innerHTML += messageElementHTML
+        } else {
+        let readOnlyMessageElementHTML = messagesHtml.createReadOnlyMessageElementHTML(message)
+        messageBoard.innerHTML += readOnlyMessageElementHTML
+        }
     })
     }
 }
