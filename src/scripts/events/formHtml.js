@@ -4,6 +4,8 @@ const eventCalendar = {
     buildAndAppendEventCalendar: () => {
         const calendar = `
             <form>
+                <input type="hidden" id="eventId" value="" />
+
                 <fieldset class="form-fieldset">
                     <label id="name" for="nameOfEvent">Name of Event</label>
                     <input type="text" name="nameOfEvent" id="nameOfEvent" placeholder="Name">
