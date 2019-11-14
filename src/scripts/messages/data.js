@@ -6,10 +6,10 @@ const messagesData = {
             .then(response => response.json())
     },
 
-    getSingleMessage(message) {
-        return fetch(`http://localhost:8088/messages/${message.id}?_expand=user`)
+    getSingleMessage(messageId) {
+        return fetch(`http://localhost:8088/messages/${messageId}?_expand=user`)
         .then(response => response.json())
-    }
+    },
 
     storeNewMessage(newMessageObject) {
         return fetch("http://localhost:8088/messages", {
@@ -22,17 +22,20 @@ const messagesData = {
                     .then(messages => messages.json())
     },
 
-    updateMessageFields() {
-
+    deleteMessage(messageId) {
+        return fetch(`http://localhost:8088/messages/${messageId}`, {
+            method: "DELETE"
+          })
+            .then(response => response.json())
     },
 
-    updateSingleMesage(message, editedMessage) {
+    updateSingleMessage(message) {
         return fetch(`http://localhost:8088/messages/${message.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(editedMessage)
+            body: JSON.stringify(message)
         })
     }
 }

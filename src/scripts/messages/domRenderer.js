@@ -11,6 +11,7 @@ renderMessagesContainerToDom() {
 
 renderAllMessagesToDom(messages) {
     const messageBoard = document.querySelector("#messageBoard")
+    messageBoard.innerHTML = ""
     messages.forEach(message => {
         const activeUser = sessionStorage.getItem("activeUser")
         if (Number(activeUser) === message.userId) {

@@ -37,7 +37,7 @@ createReadOnlyMessageElementHTML(message) {
     `
     },
 
-buildEditForm(messageToEdit) {
+buildEditForm(message) {
     return `
         <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
         <input type="text" id="text-edit" value="${message.message}">

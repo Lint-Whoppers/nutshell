@@ -192,7 +192,13 @@ h5#messagePostedBy{
   margin-right: 5px;
 }
 
-.fa-pen:hover, .fa-trash-alt:hover {
+.fa-save {
+  color: #90C6F4;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.fa-pen:hover, .fa-trash-alt:hover, .fa-save:hover {
   cursor: pointer;
   color: rgb(91, 171, 240);
 }
