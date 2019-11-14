@@ -1,4 +1,5 @@
 // author:Michelle Johnson (build form)
+import eventListener from "../events/eventListeners"
 
 const eventCalendar = {
     buildAndAppendEventCalendar: (entry) => {
@@ -29,6 +30,8 @@ const eventCalendar = {
                     <button id="saveChanges">Save Changes</button>
                     <article class="eventLog"></article>
                     `
+            eventListener.addEventListenerToSaveChangesButton()
+
         } else {
             calendarContainer.innerHTML = ""
             calendarContainer.innerHTML = calendar += `
@@ -36,10 +39,6 @@ const eventCalendar = {
                     <article class="eventLog"></article>`
 
         }
-
-
-
-
 
     }
 

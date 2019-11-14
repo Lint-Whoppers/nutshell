@@ -38,6 +38,7 @@ const startUpApplication = () => {
         eventListener.deleteButtonListener()
         eventListener.editButtonListener()
         messagesEvents.createNewMessageButtonHandler()
+        
     }
 }
 

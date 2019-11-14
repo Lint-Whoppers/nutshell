@@ -5,7 +5,6 @@ import form from "../events/formHtml.js"
 export default {
     addEventListenerToAddEventButton: () => {
         document.querySelector("#addEventButton").addEventListener("click", e => {
-            console.log("click")
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
@@ -39,7 +38,6 @@ export default {
         const deleteEvent = document.querySelector(".eventLog")
 
         deleteEvent.addEventListener("click", event => {
-            console.log("click")
             if (event.target.id.startsWith("deleteEvent--")) {
                 // Extract event id from the button's id attribute
                 const eventToDelete = event.target.id.split("--")[1]
@@ -57,7 +55,6 @@ export default {
         fetch(`http://localhost:8088/events/${eventId}`)
             .then(response => response.json())
             .then(event => {
-                console.log(event)
                 form.buildAndAppendEventCalendar("edit")
 
                 // Get reference to input fields in the form
@@ -81,6 +78,26 @@ export default {
 
                 this.updateFormFields(eventIdToEdit)
             }
+        })
+    },
+    addEventListenerToSaveChangesButton: () => {
+        document.querySelector("#saveChanges").addEventListener("click", e => {
+            const name = document.querySelector("#nameOfEvent").value
+            const date = document.querySelector("#eventDate").value
+            const location = document.querySelector("#eventLocation").value
+            const userId = sessionStorage.getItem("activeUser")
+
+            //save journal entry (json-server returns it) then render it
+            data.saveEventEntry({ name, date, location, userId })
+
+                .then(data.getAllEvents)
+                .then(response => {
+                    render.renderEvent(response)
+                    document.querySelector("#nameOfEvent").value = ""
+                    document.querySelector("#eventDate").value = ""
+                    document.querySelector("#eventLocation").value = ""
+                })
+
         })
     }
 }
