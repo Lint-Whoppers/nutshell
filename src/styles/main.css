@@ -85,7 +85,7 @@ ul.topnav img.left {
 }
 
 /* The popup form - hidden by default */
-.signUpForm-popup {
+.signUpForm-popup, #newArticleContainer {
     display: none;
     margin-left: 25%;
     margin-right:25%;
