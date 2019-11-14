@@ -27,7 +27,7 @@ const newsFormsObject = {
         </form>
 
         `
-        const popUpContainer = document.querySelector("#popup-container")
+        const popUpContainer = document.querySelector("#newArticleForm-PopupContainer")
         popUpContainer.innerHTML = formThatAppearsAfterNewArticleButtonisClicked
     }
 }
