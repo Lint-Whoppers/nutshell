@@ -28,8 +28,8 @@ getAllTasks() {
         // .then(response => console.log(response))
     },
 
-deleteTaskEntries () {
-    return fetch("http://localhost:8088/tasks", {
+deleteTaskEntries (taco) {
+    return fetch(`http://localhost:8088/tasks/${taco}`, {
         method: "DELETE",
     })
         .then(response => response.json())

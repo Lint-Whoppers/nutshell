@@ -11,6 +11,19 @@ const taskEvents = {
             // console.log("click")
         })
     },
+
+    taskDeleteListener () {
+        const deleteTaskButton = document.querySelector("#taskDisplay")
+        deleteTaskButton.addEventListener("click", event => {
+            if (event.target.id.startsWith("deleteTask--")) {
+                const taskToDelete = event.target.id.split("--")[1]
+                randomTask.deleteTaskEntries(taskToDelete)
+                .then(randomTask.getAllTasks)
+                .then(taskRender.displayTasksFunction);
+            }
+        });
+    }
 }
 
 export default taskEvents;
+
