@@ -1,6 +1,6 @@
 //*** PURPOSE: TO HOST ALL EVENT LISTENERS FOR THE NEWS SECTION ***
 
-
+import API from "./data.js"
 //*************************************************************************
 //  New Article Button. When clicked, it takes you to the New Article Form.
 //*************************************************************************
@@ -18,13 +18,13 @@ const newsEventListeners = {
         const clickSaveArticleButton = document.querySelector("#save-article-button")
         .addEventListener("click", () => {
             console.log("clicked")
-            const newsTitle = document.querySelector("#newsTitleInput").value
+            const title = document.querySelector("#newsTitleInput").value
             const synopsis = document.querySelector("#newsSynopsisInput").value
-            const articleUrl = document.querySelector("#articleUrlInput").value
+            const url = document.querySelector("#articleUrlInput").value
             const userId = sessionStorage.getItem("activeUser")
             
             //save journal entry (json-server returns it) then render it
-            API.saveArticleEntry({ newsTitle, synopsis, articleUrl, userId})
+            API.saveArticleEntry({ title, synopsis, url, userId})
             
             .then(API.getAllArticles)
             .then(response => render.renderArticleTaco(response))
