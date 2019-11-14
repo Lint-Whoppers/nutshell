@@ -23,6 +23,12 @@ const messagesEvents = {
                     const messageElementRef = document.querySelector(`#message--${message.id}`)
                     messageElementRef.innerHTML = messagesHtml.buildEditForm(response)
                 })
+        } else if (idAttribute.includes("updateMessage--")) {
+            const updatedMessage = {
+                // "userId":
+                message: document.querySelector("#text-edit").value
+                // "timestamp":
+            }
         }
        
 
