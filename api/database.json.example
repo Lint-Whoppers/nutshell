@@ -135,6 +135,24 @@
       "id": 2
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": 1
+    },
+    {
+      "name": "blha",
+      "date": "2019-11-07",
+      "userId": "2",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "name": "e",
+      "date": "2020-05-09",
+      "userId": "2",
+      "completed": false,
+      "id": 3
+    }
+    ],
   "friends": []
 }
