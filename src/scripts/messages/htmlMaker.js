@@ -35,7 +35,18 @@ createReadOnlyMessageElementHTML(message) {
     <p id="messageTimestamp">${message.timestamp}</p>
     </article>
     `
-    }
+    },
+
+buildEditForm(messageToEdit) {
+    return `
+        <h5 id="messagePostedBy">${message.user.firstName} ${message.user.lastName}</h5>
+        <input type="text" id="text-edit" value="${message.message}">
+        <div id="messageElementBottomRow">
+        <p id="messageTimestamp">${message.timestamp}</p>
+        <i class="fas fa-save" id="updateMessage--${message.id}"></i>
+        </div>
+    `
+}
 }
 
 export default messagesHtml

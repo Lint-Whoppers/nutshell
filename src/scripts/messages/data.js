@@ -6,6 +6,11 @@ const messagesData = {
             .then(response => response.json())
     },
 
+    getSingleMessage(message) {
+        return fetch(`http://localhost:8088/messages/${message.id}?_expand=user`)
+        .then(response => response.json())
+    }
+
     storeNewMessage(newMessageObject) {
         return fetch("http://localhost:8088/messages", {
                     method: "POST",
@@ -14,7 +19,21 @@ const messagesData = {
                     },
                     body: JSON.stringify(newMessageObject)
                 })
-                    .then(contacts => contacts.json())
+                    .then(messages => messages.json())
+    },
+
+    updateMessageFields() {
+
+    },
+
+    updateSingleMesage(message, editedMessage) {
+        return fetch(`http://localhost:8088/messages/${message.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedMessage)
+        })
     }
 }
 
