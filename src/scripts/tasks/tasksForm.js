@@ -56,6 +56,8 @@ displayTasksFunction: (taskEntries) => {
     </article>
     `
     
+    // THis is where I called and run this function if you take out the variable then you can't utilize it any further. So the previous const is necessary for this down here to work.
+    
     const displayTaskContainer = document.querySelector("#taskDisplay")
     displayTaskContainer.innerHTML += displayTasks;
   });// debugger
