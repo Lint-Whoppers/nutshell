@@ -1,8 +1,8 @@
 // author:Michelle Johnson (build form)
 
 const eventCalendar = {
-    buildAndAppendEventCalendar: () => {
-        const calendar = `
+    buildAndAppendEventCalendar: (entry) => {
+        let calendar = `
             <form>
                 <input type="hidden" id="eventId" value="" />
 
@@ -20,16 +20,30 @@ const eventCalendar = {
                 </fieldset>
             </form>
 
-            <button id="addEventButton">Add Event</button>
             
-            <article class="eventLog"></article>
             `
+        const calendarContainer = document.querySelector("#events-container")
+        if (entry === "edit") {
+            calendarContainer.innerHTML = ""
+            calendarContainer.innerHTML = calendar += `
+                    <button id="saveChanges">Save Changes</button>
+                    <article class="eventLog"></article>
+                    `
+        } else {
+            calendarContainer.innerHTML = ""
+            calendarContainer.innerHTML = calendar += `
+                    <button id="addEventButton">Add Event</button>
+                    <article class="eventLog"></article>`
 
-        const eventCalendarContainer = document.querySelector("#events-container")
-        eventCalendarContainer.innerHTML = calendar
+        }
+
+
+
+
+
     }
-    
-    
+
+
 }
 
 export default eventCalendar
