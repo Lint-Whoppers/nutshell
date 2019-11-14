@@ -85,10 +85,10 @@ export default {
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
-            const userId = sessionStorage.getItem("activeUser")
+            const eventId = eventId.id
 
             //save journal entry (json-server returns it) then render it
-            data.saveEventEntry({ name, date, location, userId })
+            data.updateSingleEvent({ name, date, location, eventId})
 
                 .then(data.getAllEvents)
                 .then(response => {
