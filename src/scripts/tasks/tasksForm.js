@@ -40,6 +40,18 @@ getTaskAndSendToDisplay() {
   const completed = false
 
   return randomTaskData.storeNewTask({name, date, userId, completed})
+},
+
+displayTasksFunction: (taskEntry) => {
+  return `
+  <article>
+    <h2>${taskEntry.name}</h2>
+    <p>${taskEntry.date}</p>
+    <p>${taskEntry.completed}</p>
+    <button id="editTask--${taskEntry.id}">Edit Task</button>
+    <button id="deleteTask--${taskEntry.id}">Delete Task</button>
+  </article>
+  `
 }
 
 }

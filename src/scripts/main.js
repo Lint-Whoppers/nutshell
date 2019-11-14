@@ -28,6 +28,7 @@ const startUpApplication = () => {
         messagesData.getAllMessages().then(messages => dom.renderAllMessagesToDom(messages))
         eventCalendar.buildAndAppendEventCalendar()
         data.getAllEvents().then(response => render.renderEvent(response))
+        tasks.displayTasksFunction();
         
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
