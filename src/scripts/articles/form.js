@@ -11,13 +11,18 @@ const newsFormsObject = {
         <input type = "hidden" id = "newsIdInput">
 
         <label for="articleTitle"><b>Article Title:</b></label>
-        <input type="text" placeholder="Enter News Article Title" id="newsTitleInput" required>
+        <input type="text" placeholder="Enter News Article Title" id="newsTitleInput">
+        <br><br>
 
         <label for="articleSynopsis"><b>Article Synopsis:</b></label>
-        <input type="textarea" placeholder="Give a brief summary of the article" id="newsSynopsisInput" required rows="3" cols="40">
+        <textarea placeholder="Give a brief summary of the article" id="newsSynopsisInput" rows="3" cols="40"></textarea>
+        <br><br>
 
         <label for="articleURL"><b>Article URL:</b></label>
-        <input type="text" placeholder="Place article URL here" id="articleUrlInput" required>
+        <input type="text" placeholder="Place article URL here" id="articleUrlInput">
+        <br><br>
+
+        <button id = "save-article-button">Save Article</button>
 
         </form>
 
