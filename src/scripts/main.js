@@ -11,6 +11,7 @@ import render from "./events/domRender.js"
 import data from "./events/data.js"
 import dom from "./messages/domRenderer.js";
 import taskEvents from "./tasks/taskEventListeners.js";
+import messagesEvents from "./messages/eventListeners.js";
 
 const startUpApplication = () => {
     if (sessionStorage.getItem("activeUser") === null) {
@@ -25,6 +26,8 @@ const startUpApplication = () => {
         newsHtmlLayout.buildAndAppendNewsSectionHtml()
         messagesHtml.buildMessagesHTML()
         dom.renderMessagesContainerToDom()
+
+        //DATA-RETRIEVING AND APPENDING FUNCTIONS GO HERE
         messagesData.getAllMessages().then(messages => dom.renderAllMessagesToDom(messages))
         eventCalendar.buildAndAppendEventCalendar()
         data.getAllEvents().then(response => render.renderEvent(response))
@@ -33,6 +36,7 @@ const startUpApplication = () => {
         eventListener.addEventListenerToAddEventButton()
         taskEvents.createTaskButtonHandler()
         eventListener.deleteButtonListener()
+        messagesEvents.createNewMessageButtonHandler()
     }
 }
 
