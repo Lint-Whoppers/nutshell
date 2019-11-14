@@ -26,7 +26,14 @@ getAllTasks() {
     return fetch("http://localhost:8088/tasks")
         .then(response => response.json())
         // .then(response => console.log(response))
-    }
+    },
+
+deleteTaskEntries () {
+    return fetch("http://localhost:8088/tasks", {
+        method: "DELETE",
+    })
+        .then(response => response.json())
+},
 }
 
 export default randomTask;
