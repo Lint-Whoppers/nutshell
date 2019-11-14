@@ -1,19 +1,24 @@
+import newsDom from "./articleDomRenderer"
+
 const API = {
-saveArticleEntry: (article) => {    //article is a taco variable
+
+    getAllArticles() {
+        return fetch("http://localhost:8088/articles")
+            .then(response => response.json())
+    },
+
+
+saveArticleEntry: (newArticle) => {    //article is a taco variable
     return fetch("http://localhost:8088/articles", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(article)
+        body: JSON.stringify(newArticle)
     })
     .then(response => response.json())
 },
 
-getAllArticles() {
-    return fetch("http://localhost:8088/articles")
-        .then(response => response.json())
-}
 }
 
 export default API

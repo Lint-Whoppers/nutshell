@@ -1,6 +1,7 @@
 //*** PURPOSE: TO HOST ALL EVENT LISTENERS FOR THE NEWS SECTION ***
 
 import API from "./data.js"
+import newsDom from "./articleDomRenderer.js"
 //*************************************************************************
 //  New Article Button. When clicked, it takes you to the New Article Form.
 //*************************************************************************
@@ -17,6 +18,7 @@ const newsEventListeners = {
     clickSaveArticleHandler: () => {
         const clickSaveArticleButton = document.querySelector("#save-article-button")
         .addEventListener("click", () => {
+            event.preventDefault()
             console.log("clicked")
             const title = document.querySelector("#newsTitleInput").value
             const synopsis = document.querySelector("#newsSynopsisInput").value
@@ -24,19 +26,29 @@ const newsEventListeners = {
             const userId = sessionStorage.getItem("activeUser")
             
             //save journal entry (json-server returns it) then render it
-            API.saveArticleEntry({ title, synopsis, url, userId})
+            const inputFactory = (title, synopsis, url, userId) => {
+                return {
+                    "title": title,
+                    "synopsis": synopsis,
+                    "url": url,
+                    "userId": userId
+                }
+            }
+            const articleObject = inputFactory(title, synopsis, url, userId)
+            console.log(articleObject)
             
-            .then(API.getAllArticles)
-            .then(response => render.renderArticleTaco(response))
+            API.saveArticleEntry(articleObject) //POST
+            .then(API.getAllArticles) //GET
+            .then(response => newsDom.renderArticle(response)) //RENDER
         })
     },
 
     makeArticleComponent: (articleEntryTaco) => {
         return `
             <section>
-                <h3>${articleEntryTaco.newsTitle}</h3>
+                <h3>${articleEntryTaco.title}</h3>
                 <p>${articleEntryTaco.synopsis}</p>
-                <p>${articleEntryTaco.articleUrl}</p>
+                <p>${articleEntryTaco.url}</p>
                 <button id="editArticle--${articleEntryTaco.id}">Edit Article</button>
                 <button id="deleteArticle--${articleEntryTaco.id}">Delete Article</button>
             </section>

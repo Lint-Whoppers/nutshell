@@ -23,7 +23,7 @@ const newsFormsObject = {
         <br><br>
 
         <button id = "save-article-button">Save Article</button>
-
+        
         </form>
 
         `

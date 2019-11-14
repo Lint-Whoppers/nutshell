@@ -1,4 +1,4 @@
-import newsEventListeners from "./articles/eventListeners"
+import newsEventListeners from "./eventListeners.js"
 
 const newsDom = {
         renderArticle: (articleTaco) => {

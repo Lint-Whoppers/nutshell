@@ -15,6 +15,7 @@ import dom from "./messages/domRenderer.js";
 import taskEvents from "./tasks/taskEventListeners.js";
 import messagesEvents from "./messages/eventListeners.js";
 import randomTask from "./tasks/taskDataHandler";
+import API from "./articles/data.js";
 
 const startUpApplication = () => {
     if (sessionStorage.getItem("activeUser") === null) {
@@ -35,7 +36,8 @@ const startUpApplication = () => {
         eventCalendar.buildAndAppendEventCalendar()
         data.getAllEvents().then(response => render.renderEvent(response))
         randomTask.getAllTasks().then(response => tasks.displayTasksFunction(response))
-        
+       
+
         // EVENT LISTENERS GO HERE
         eventListener.addEventListenerToAddEventButton()
         newsEventListeners.clickNewArticleHandler()
