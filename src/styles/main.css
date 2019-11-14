@@ -121,12 +121,19 @@ ul.topnav img.left {
 #popup-container {
       margin-bottom: 10%;
   }
-/* Main Page Styling */
-#main-page {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  /* Main Page Styling */
+  #main-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .componentTitle {
+    text-align: center;
+    height: 15px;
+    margin: none;
+    padding: none;
+  }
 
 /*footer styling*/
 .footer {
@@ -144,16 +151,10 @@ ul.topnav img.left {
 
 #messageBoard {
   width: 100%;
-  height: px;
+  height: 180px;
   overflow: scroll;
 }
 
-.messageInput {
-  display: block;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 label.messageLabel {
   font-size: 14px;
@@ -161,28 +162,71 @@ label.messageLabel {
 }
 
 .messageElement {
-font-size: 14px;
+  font-size: 14px;
+  background-color: rgb(235, 243, 252);
+  border: 1px solid rgb(201, 220, 242);
+  border-radius: 5px;
+  margin: 4px;
+  padding: 0 5px 0 5px;
+  word-wrap: normal;
+}
+
+.messageElement:last-of-type {
+  margin-bottom: 0;
+}
+
+div.messageElementButtons {
+text-align: right;
+}
+
+h5#messagePostedBy{
+  margin: 0;
+}
+
+#messageTimestamp {
+  font-size: 10px;
+  margin: 0;
+}
+
+.fa-pen, .fa-trash-alt {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.fa-trash-alt:hover {
+  cursor: pointer;
+  color: rgb(216, 17, 17);
+}
+
+.messageInput {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #messages-container, #news-container{
   border: 1px solid #d0d0d0;
-  height: 90%;
 }
 
-.componentTitle {
-  text-align: center;
-  height: 15px;
-  margin: none;
-  padding: none;
-}
+
 #newMessage {
   display: flex;
 }
 
-#newMessageSubmitButton {
-  margin-left: 5%;
-  height: 25px;
-  width: 60px;
-  font-size: 13px;
+#newMessageSubmitButton{
+  color: #cdcdcd;
+  width: 20%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 11.5px 0 11.5px 0;
+  font-size: 32px;
+  text-align: center;
+  border: solid 1px #dadada;
+}
+
+#newMessageSubmitButton:hover, .fa-pen:hover {
+  cursor: pointer;
+  color: #90C6F4;
 }
 
