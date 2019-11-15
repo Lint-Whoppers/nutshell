@@ -24,7 +24,7 @@ let taskEvents = {
         })
     },
 // This needs to be refactored to fit the example on the
-    editDeleteListener () {
+    editTaskListener () {
         const editTaskButon = document.querySelector("#taskDisplay")
         editTaskButon.addEventListener("click", event => {
             if (event.target.id.startsWith("editTask--")) {
@@ -34,17 +34,17 @@ let taskEvents = {
             }
         })
     },
-    // saveButtonListener () {
-    //     saveButtonListener.addeventListener("click", event => {
-    //         const saveButtonId = document.querySelector("#taskId")
+    saveButtonListener () {
+        saveButtonListener.addeventListener("click", event => {
+            const saveButtonId = document.querySelector("#taskId")
 
-    //         if ( saveButtonId.value !== "") {
-    //             editTask(taskId) {
+            if ( saveButtonId.value !== "") {
+                editTask(taskId) }
 
-    //             }
-    //         }
-    //     })
-    // }
+                }
+            }
+        })
+    }
 }
 
 export default taskEvents;
