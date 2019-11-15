@@ -1,13 +1,14 @@
 import newsEventListeners from "./eventListeners.js"
+import newsHtmlLayout from "./HTMLLayoutforNewsSection.js"
 
 const newsDom = {
-        renderArticle: (articleTaco) => {
+        renderArticle: (articlesArrayTaco) => {
             let HtmlForAllArticles = ""
-            articleTaco.forEach(articleTaco => {
-                const articleHtml = newsEventListeners.makeArticleComponent(articleTaco)
+            articlesArrayTaco.forEach(articleTaco => {
+                const articleHtml = newsHtmlLayout.makeArticleComponent(articleTaco)
                 HtmlForAllArticles += articleHtml
             })
-            const postArticle = document.querySelector("#newArticleContainer")
+            const postArticle = document.querySelector("#articlesDisplayContainer")
             postArticle.innerHTML = HtmlForAllArticles
         }
 }
