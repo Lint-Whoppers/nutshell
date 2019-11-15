@@ -42,6 +42,7 @@ const startUpApplication = () => {
         eventListener.addEventListenerToAddEventButton()
         newsEventListeners.clickNewArticleHandler()
         newsEventListeners.clickSaveArticleHandler()
+        newsEventListeners.clickDeleteArticleHandler()
         taskEvents.createTaskButtonHandler()
         eventListener.deleteButtonListener()
         messagesEvents.createNewMessageButtonHandler()
