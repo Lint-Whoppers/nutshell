@@ -3,7 +3,7 @@ import randomTask from "./taskDataHandler.js";
 
 let taskEvents = {
     createTaskButtonHandler () {
-        const createTaskButton = document.querySelector("#addTaskButton")
+        const createTaskButton = document.querySelector("#saveTask")
         createTaskButton.addEventListener("click", () => {
             // const newTaskObject = document.querySelector("#taskInputField").value;
             // console.log(newTaskObject)
@@ -24,27 +24,32 @@ let taskEvents = {
         })
     },
 // This needs to be refactored to fit the example on the
-    editDeleteListener () {
+    editTaskListener () {
         const editTaskButon = document.querySelector("#taskDisplay")
         editTaskButon.addEventListener("click", event => {
             if (event.target.id.startsWith("editTask--")) {
                 const taskToEdit = event.target.id.split("--")[1]
-
+                // console.log(taskToEdit)
                 updateEditFields(taskToEdit)
             }
         })
     },
     // saveButtonListener () {
+    //     const saveButtonId = document.querySelector("#saveTask")
     //     saveButtonListener.addeventListener("click", event => {
-    //         const saveButtonId = document.querySelector("#taskId")
-
+    //             console.log("click")
     //         if ( saveButtonId.value !== "") {
-    //             editTask(taskId) {
-
-    //             }
+    //             editTask(taskId)
+    //         } else {
+    //            const editTask = id => {
+    //                const updatedTask = {
+    //                    taskName: document.querySelector("#taskId").value,
+    //                    taskDate: document.querySelector("#taskDate").value
+    //                }
+    //                randomTask.putEditedTask()
+    //            } // WTF IS SAVE FUNCTIONALITY?!!!
     //         }
     //     })
     // }
 }
-
 export default taskEvents;
