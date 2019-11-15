@@ -32,8 +32,8 @@ export default {
                 <h3>${eventEntry.name}</h3>
                 <p>${eventEntry.date}</p>
                 <p>${eventEntry.location}</p>
-                <button id="editEvent--${eventEntry.id}">Edit Event</button>
-                <button id="deleteEvent--${eventEntry.id}">Delete Event</button>
+                <i class="fas fa-pen" id="editEvent--${eventEntry.id}"></i>
+                <i class="fas fa-trash-alt" id="deleteEvent--${eventEntry.id}"></i>
             </section>
             `
     },
