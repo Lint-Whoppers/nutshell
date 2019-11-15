@@ -11,9 +11,10 @@ renderMessagesContainerToDom() {
 
 renderAllMessagesToDom(messages) {
     const messageBoard = document.querySelector("#messageBoard")
+    messageBoard.innerHTML = ""
     messages.forEach(message => {
         const activeUser = sessionStorage.getItem("activeUser")
-        if (activeUser === message.userId) {
+        if (Number(activeUser) === message.userId) {
         let messageElementHTML = messagesHtml.createMessageElementHTML(message)
         messageBoard.innerHTML += messageElementHTML
         } else {

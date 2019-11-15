@@ -44,8 +44,10 @@ const startUpApplication = () => {
         newsEventListeners.clickSaveArticleHandler()
         newsEventListeners.clickDeleteArticleHandler()
         taskEvents.createTaskButtonHandler()
+        taskEvents.taskDeleteListener()
         eventListener.deleteButtonListener()
         messagesEvents.createNewMessageButtonHandler()
+        messagesEvents.attachMessageElementBttnHandlers()
     }
 }
 

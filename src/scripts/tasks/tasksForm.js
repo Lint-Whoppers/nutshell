@@ -6,24 +6,28 @@ import taskEvents from "./taskEventListeners.js";
 const taskRender = {
 buildAndAppendTaskContainer: () => {
     const taskContainerHtml = `
-    <fieldset clas=""form-container">
-    <div id="toDoListContainer" class="taskForm-popup">
-      <h2>ToDo List</h2>
-      
-      <label for="taskName"><b>Task Name</b></label>
-      <input type="text" placeholder="Enter Task Name"
-      name="taskName" id="taskNameInput" required>
+    <form>
+      <input type="hidden" id="taskId" value="" />
+      <fieldset clas="fieldset">
+      <div id="toDoListContainer" class="taskForm-popup">
+        <h2>ToDo List</h2>
+        
+        <label for="taskName"><b>Task Name</b></label>
+        <input type="text" placeholder="Enter Task Name"
+        name="taskName" id="taskNameInput" required>
 
-      <label for="taskExpectedDate"><b>Due Date</b></label>
-      <input type="date" placeholder="Enter Due Date"
-      name="taskDate" id="taskDateInput" required>
-      
-      
-      <button id="addTaskButton" class="addBtn"
-      >Add Task</button>
-      </div>
-      <section id="taskDisplay"></section>
-    </fieldset>
+        <label for="taskExpectedDate"><b>Due Date</b></label>
+        <input type="date" placeholder="Enter Due Date"
+        name="taskDate" id="taskDateInput" required>
+        
+        
+        <button id="addTaskButton" class="addBtn"
+        >Add Task</button>
+        </div>
+        <section id="taskDisplay"></section>
+      </fieldset>
+      <button id="saveTask">Save Task</button>
+    </form>
     `
 
 const taskPageContainer = document.querySelector("#toDo-container")
@@ -44,10 +48,11 @@ getTaskAndSendToDisplay() {
 },
 
 displayTasksFunction: (taskEntries) => {
+  let displayTasks = "";
   // This for Each loop allows the computer to understand that my builder needs to go through Each object on the array instead of tring to get all of them and then seperate them. SO if you delete this it will return only undefined.
   taskEntries.forEach(task => {
     // I had to refactor this and declare this function as a variable so I could call it properly down the line.
-    const displayTasks = `<article>
+    displayTasks +=`<article class="task--${task.id}">
     <h2>${task.name}</h2>
     <p>${task.date}</p>
     <p>${task.completed}</p>
@@ -58,11 +63,11 @@ displayTasksFunction: (taskEntries) => {
     
     // THis is where I called and run this function if you take out the variable then you can't utilize it any further. So the previous const is necessary for this down here to work.
     
-    const displayTaskContainer = document.querySelector("#taskDisplay")
-    displayTaskContainer.innerHTML += displayTasks;
   });// debugger
-    
-  }
+  
+  const displayTaskContainer = document.querySelector("#taskDisplay")
+  displayTaskContainer.innerHTML = displayTasks;
+}
 
 }
 
