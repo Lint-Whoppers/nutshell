@@ -12,20 +12,22 @@ buildAndAppendUserMainPage: () => {
     </ul>
     </nav>
     <div id="main-page">
-        <section id="left-container">
+      <section id="left-container">
         <div id="friends-container">Friends</div>
         <div id="events-container">Events</div>
-        </section>
-        <section id="center-container">
+      </section>
+      <section id="center-container">
         <div id="messages-container"></div>
         <div id="news-container">
         News
             <div id="news-popup-container">
             </div>
         </div>
-        </section>
+      </section>
+      <section id="right-container">
         <div id="toDo-container">ToDo</div>
         <div id="popup-container"></div>
+      </section>  
     </div>
     <div class="footer">
         <p>Made By: Charles Jackson, Jeremiah Bell, Michelle Johnson, Sam Pita</p>
