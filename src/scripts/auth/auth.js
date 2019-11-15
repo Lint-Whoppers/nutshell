@@ -43,14 +43,10 @@ startUpApplication() {
 
         // EVENT LISTENERS GO HERE
         authEventListeners.logoutButtonHandler()
-        eventListener.addEventListenerToAddEventButton()
         newsEventListeners.clickNewArticleHandler()
         newsEventListeners.clickSaveArticleHandler()
-        // newsEventListeners.clickDeleteArticleHandler()
         taskEvents.createTaskButtonHandler()
         taskEvents.taskDeleteListener()
-        eventListener.deleteButtonListener()
-        eventListener.editButtonListener()
         messagesEvents.createNewMessageButtonHandler()
         messagesEvents.attachMessageElementBttnHandlers()
     }
