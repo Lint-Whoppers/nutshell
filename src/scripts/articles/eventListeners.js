@@ -44,21 +44,21 @@ const newsEventListeners = {
             })
     },
 
-    clickDeleteArticleHandler: () => {
-        const clickDeleteArticleButton = document.querySelector("#deleteArticle")
-        clickDeleteArticleButton.addEventListener("click", event => {
-            if (event.target.id.startsWith("deleteArticle--")) {
-                // Extract recipe id from the button's id attribute
+    // clickDeleteArticleHandler: () => {
+    //     const clickDeleteArticleButton = document.querySelector("#deleteArticle")
+    //     clickDeleteArticleButton.addEventListener("click", event => {
+    //         if (event.target.id.startsWith("deleteArticle--")) {
+    //             // Extract recipe id from the button's id attribute
         
-                const articleToDelete = event.target.id.split("--")[1]
+    //             const articleToDelete = event.target.id.split("--")[1]
 
-                // Invoke the delete method, then get all recipes and render them
-                API.deleteArticleEntry(articleToDelete)
-                    .then(API.getAllArticles)
-                    .then(render)
-            }
-        })
-    }
+    //             // Invoke the delete method, then get all recipes and render them
+    //             API.deleteArticleEntry(articleToDelete)
+    //                 .then(API.getAllArticles)
+    //                 .then(render)
+    //         }
+    //     })
+    // }
 }
 
 export default newsEventListeners
