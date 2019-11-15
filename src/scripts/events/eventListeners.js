@@ -94,6 +94,7 @@ export default {
             data.updateSingleEvent({ name, date, location, userId}, eventId)
                 .then(data.getAllEvents)
                 .then(response => {
+                    form.buildAndAppendEventCalendar()
                     render.renderEvent(response)
                     document.querySelector("#nameOfEvent").value = ""
                     document.querySelector("#eventDate").value = ""

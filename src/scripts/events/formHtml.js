@@ -1,6 +1,7 @@
 // author:Michelle Johnson
 // purpose: build and append form
 import eventListener from "../events/eventListeners"
+import eventListeners from "../events/eventListeners"
 
 const eventCalendar = {
     buildAndAppendEventCalendar: (entry) => {
@@ -38,7 +39,9 @@ const eventCalendar = {
             calendarContainer.innerHTML = calendar += `
                     <button id="addEventButton">Add Event</button>
                     <article class="eventLog"></article>`
-
+            eventListeners.addEventListenerToAddEventButton()
+            eventListener.deleteButtonListener()
+            eventListener.editButtonListener()
         }
 
     }
