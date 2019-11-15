@@ -1,9 +1,13 @@
-// author:Michelle Johnson (build form)
+// author:Michelle Johnson
+// purpose: build and append form
+import eventListener from "../events/eventListeners"
 
 const eventCalendar = {
-    buildAndAppendEventCalendar: () => {
-        const calendar = `
+    buildAndAppendEventCalendar: (entry) => {
+        let calendar = `
             <form>
+                <input type="hidden" id="eventId" value="" />
+
                 <fieldset class="form-fieldset">
                     <label id="name" for="nameOfEvent">Name of Event</label>
                     <input type="text" name="nameOfEvent" id="nameOfEvent" placeholder="Name">
@@ -18,16 +22,28 @@ const eventCalendar = {
                 </fieldset>
             </form>
 
-            <button id="addEventButton">Add Event</button>
             
-            <article class="eventLog"></article>
             `
+        const calendarContainer = document.querySelector("#events-container")
+        if (entry === "edit") {
+            calendarContainer.innerHTML = ""
+            calendarContainer.innerHTML = calendar += `
+                    <button id="saveChanges">Save Changes</button>
+                    <article class="eventLog"></article>
+                    `
+            eventListener.addEventListenerToSaveChangesButton()
 
-        const eventCalendarContainer = document.querySelector("#events-container")
-        eventCalendarContainer.innerHTML = calendar
+        } else {
+            calendarContainer.innerHTML = ""
+            calendarContainer.innerHTML = calendar += `
+                    <button id="addEventButton">Add Event</button>
+                    <article class="eventLog"></article>`
+
+        }
+
     }
-    
-    
+
+
 }
 
 export default eventCalendar
