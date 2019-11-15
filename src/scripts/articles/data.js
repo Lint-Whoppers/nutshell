@@ -19,6 +19,13 @@ saveArticleEntry: (newArticle) => {    //article is a taco variable
     .then(response => response.json())
 },
 
+deleteArticleEntry: (articleId) => {
+    return fetch(`http://localhost:8088/articles/${articleId}`, {
+        method: "DELETE"
+    })
+        .then(response => response.json())
+},
+
 }
 
 export default API
