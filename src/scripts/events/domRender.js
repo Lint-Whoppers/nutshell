@@ -1,3 +1,5 @@
+// author: Michelle Johnson
+// purpose: rendering onto the DOM
 import make from "../events/eventListeners.js"
 
 export default {

@@ -1,3 +1,5 @@
+// author: Michelle Johnson
+// purpose: fetch calls to database
 // Use `fetch` with the POST method to add your entry to your API
 export default {
     saveEventEntry: (event) => { //rename variable
