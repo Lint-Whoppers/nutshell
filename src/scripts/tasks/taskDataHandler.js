@@ -37,6 +37,21 @@ const randomTask = {
     getSingleTask() {
         return fetch("http://localhost:8088/tasks")
     }
+
+    // putEditedTask() {
+    //     fetch(`http://localhost:8088/tasks/${id}`, {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify(updatedObject)
+    //  })
+    //   .then(resposne => resposne.json())
+    //   .then(() => {
+    //       document.querySelector("#taskId").value = ""
+    //   })
+    // }
 }
+
 
 export default randomTask;

@@ -21,12 +21,11 @@ buildAndAppendTaskContainer: () => {
         name="taskDate" id="taskDateInput" required>
         
         
-        <button id="addTaskButton" class="addBtn"
-        >Add Task</button>
+        <button id="saveTask" class="addBtn"
+        >Save Task</button>
         </div>
         <section id="taskDisplay"></section>
       </fieldset>
-      <button id="saveTask">Save Task</button>
     </form>
     `
 
