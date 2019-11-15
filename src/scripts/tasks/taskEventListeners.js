@@ -29,22 +29,16 @@ let taskEvents = {
         editTaskButon.addEventListener("click", event => {
             if (event.target.id.startsWith("editTask--")) {
                 const taskToEdit = event.target.id.split("--")[1]
-
+                // console.log(taskToEdit)
                 updateEditFields(taskToEdit)
             }
         })
     },
-    saveButtonListener () {
-        saveButtonListener.addeventListener("click", event => {
-            const saveButtonId = document.querySelector("#taskId")
-
-            if ( saveButtonId.value !== "") {
-                editTask(taskId) }
-
-                }
-            }
-        })
-    }
+    // saveButtonListener () {
+    //     saveButtonListener.addeventListener("click", event => {
+    //         const saveButtonId = document.querySelector("#taskId")
+    
+    //         if ( saveButtonId.value !== "") {
+    //             editTask(taskId) }
 }
-
 export default taskEvents;
