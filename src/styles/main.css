@@ -50,12 +50,17 @@ ul.topnav {
 
 ul.topnav li {float: right;}
 
-ul.topnav li a {
+ul.topnav li#logoutButton {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+ul.topnav li#logoutButton:hover {
+  color: #90C6F4;
+  cursor: pointer;
 }
 
 ul.topnav li a:hover:not(.active) {
@@ -220,7 +225,7 @@ h5#messagePostedBy{
   margin-right: auto;
 }
 
-#messages-container, #news-container{
+#messages-container, #news-container, fieldset, textarea {
   border: 1px solid #d0d0d0;
 }
 
