@@ -33,7 +33,18 @@ let taskEvents = {
                 updateEditFields(taskToEdit)
             }
         })
-    }
+    },
+    // saveButtonListener () {
+    //     saveButtonListener.addeventListener("click", event => {
+    //         const saveButtonId = document.querySelector("#taskId")
+
+    //         if ( saveButtonId.value !== "") {
+    //             editTask(taskId) {
+
+    //             }
+    //         }
+    //     })
+    // }
 }
 
 export default taskEvents;
