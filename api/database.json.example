@@ -104,9 +104,108 @@
       "email": "samrocks@gmail.com",
       "password": "123",
       "id": 15
+    },
+    {
+      "firstName": "sam",
+      "lastName": "super",
+      "email": "supersam@super.com",
+      "password": "123",
+      "id": 16
+    },
+    {
+      "firstName": "hello",
+      "lastName": "friend",
+      "email": "hellofriend@hello.com",
+      "password": "2123",
+      "id": 17
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "samsemail@gmail.com",
+      "password": "123",
+      "id": 18
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "samishappythisisworking@email.com",
+      "password": "123",
+      "id": 19
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "email": "ilovetoflybrooms@gmail.com",
+      "password": "123",
+      "id": 20
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Pita",
+      "email": "samishappythisisdone@gmail.com",
+      "password": "adfjal",
+      "id": 21
+    },
+    {
+      "firstName": "aksdjfa",
+      "lastName": "asdfasf",
+      "email": "asdfa",
+      "password": "asdfa",
+      "id": 22
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf",
+      "password": "asdf",
+      "id": 23
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf",
+      "password": "asdf",
+      "id": 24
+    },
+    {
+      "firstName": "dsakfdjsaf",
+      "lastName": "dsafkldjsalf",
+      "email": "dlsa;fd",
+      "password": "asdf",
+      "id": 25
     }
   ],
-  "articles": [],
+  "articles": [
+    {
+      "title": "NSS Hosts Hackathon",
+      "synopsis": "Nashville Software School hosts a halloween-themed hackathon.",
+      "url": "nashvillesoftwareschool.com",
+      "userId": "17",
+      "id": 1
+    },
+    {
+      "title": "Giant Cotton Candy Machine Takes Over Town",
+      "synopsis": "A giant cotton candy machine has become sentient and taken control of the city of Nashville.",
+      "url": "www.thisisdefinitelyrealnews.com",
+      "userId": "17",
+      "id": 2
+    },
+    {
+      "title": "Free Pizza",
+      "synopsis": "NSS has free pizza",
+      "url": "freepizza.com",
+      "userId": "17",
+      "id": 3
+    },
+    {
+      "title": "NSS Hosts Hackathon",
+      "synopsis": "Nashville Software School hosted a hackathon for halloween.",
+      "url": "nashvillesoftwareschool.com",
+      "userId": "17",
+      "id": 4
+    }
+  ],
   "messages": [
     {
       "id": 1,
@@ -119,40 +218,64 @@
       "userId": 4,
       "message": "We have a partial snow day today-- SWEET BRO.",
       "timestamp": "2019-11-12T16:39:57-08:00"
+    },
+    {
+      "userId": 17,
+      "message": "Hey buddy! ! ! How ya doin? GREAT!",
+      "timestamp": "Fri Nov 15 2019 10:11:12 GMT-0600 (Central Standard Time)",
+      "id": 6
+    },
+    {
+      "userId": 17,
+      "message": "Is this thing on? YES!",
+      "timestamp": "Fri Nov 15 2019 10:11:18 GMT-0600 (Central Standard Time)",
+      "id": 7
+    },
+    {
+      "userId": 17,
+      "message": "DELETE ME PLEASE",
+      "timestamp": "Fri Nov 15 2019 09:16:38 GMT-0600 (Central Standard Time)",
+      "id": 8
     }
   ],
   "events": [
     {
-      "name": "PartyTimeExcellent",
-      "date": "2019-11-13",
-      "location": "ERRYWHERE",
-      "id": 1
+      "name": "PartyTimeExcellent!",
+      "date": "2019-11-15",
+      "location": "1234 Party St",
+      "userId": 17,
+      "id": 2
     },
     {
-      "name": "SamRocks",
-      "date": "31023-12-09",
-      "location": "M HOUSE",
-      "id": 2
+      "name": "NSS Hang",
+      "date": "2019-11-29",
+      "location": "That Dive Bar",
+      "userId": 17,
+      "id": 4
     }
   ],
   "tasks": [
     {
-      "id": 1
-    },
-    {
-      "name": "blha",
-      "date": "2019-11-07",
-      "userId": "2",
+      "name": "Present Project",
+      "date": "2019-11-15",
+      "userId": "23",
       "completed": false,
       "id": 2
     },
     {
-      "name": "e",
-      "date": "2020-05-09",
-      "userId": "2",
+      "name": "Bathe My Dog",
+      "date": "2019-11-17",
+      "userId": "25",
       "completed": false,
       "id": 3
+    },
+    {
+      "name": "Cuddle Baby Otter",
+      "date": "2019-12-25",
+      "userId": "25",
+      "completed": false,
+      "id": 4
     }
-    ],
+  ],
   "friends": []
 }
