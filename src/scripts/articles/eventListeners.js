@@ -45,11 +45,8 @@ const newsEventListeners = {
     },
 
     clickDeleteArticleHandler: () => {
-        const articleList = document.querySelector("#articlesDisplayContainer") //Pointing to container that holds articles
-
-        const
-
-        articleList.addEventListener("click", event => {
+        const clickDeleteArticleButton = document.querySelector("#deleteArticle")
+        .addEventListener("click", event => {
             if (event.target.id.startsWith("deleteArticle--")) {
                 // Extract recipe id from the button's id attribute
         
