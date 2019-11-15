@@ -34,11 +34,20 @@ let taskEvents = {
             }
         })
     },
-    // saveButtonListener () {
-    //     saveButtonListener.addeventListener("click", event => {
-    //         const saveButtonId = document.querySelector("#taskId")
+    saveButtonListener () {
+        saveButtonListener.addeventListener("click", event => {
+            const saveButtonId = document.querySelector("#taskId")
     
-    //         if ( saveButtonId.value !== "") {
-    //             editTask(taskId) }
+            if ( saveButtonId.value !== "") {
+                editTask(taskId)
+            } else {
+               const editTask = id => {
+                   const updatedTask = {
+                       taskName: document.querySelector("#taskName").value,
+                       taskDate: document.querySelector("#taskDate").value
+                   }
+                   randomTask.putEditedTask()
+               } // WTF IS SAVE FUNCTIONALITY?!!!
+            }
 }
 export default taskEvents;
