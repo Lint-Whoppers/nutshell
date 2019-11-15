@@ -2,9 +2,9 @@ import newsEventListeners from "./eventListeners.js"
 import newsHtmlLayout from "./HTMLLayoutforNewsSection.js"
 
 const newsDom = {
-        renderArticle: (articleTaco) => {
+        renderArticle: (articlesArrayTaco) => {
             let HtmlForAllArticles = ""
-            articleTaco.forEach(articleTaco => {
+            articlesArrayTaco.forEach(articleTaco => {
                 const articleHtml = newsHtmlLayout.makeArticleComponent(articleTaco)
                 HtmlForAllArticles += articleHtml
             })
