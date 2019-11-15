@@ -6,9 +6,8 @@ buildAndAppendUserMainPage: () => {
     const mainPageHtml = `
     <nav id="navBar">
     <ul class="topnav">
-        <img class="left" src="src/images/otter1.png">
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <img class="left" src="src/images/otter1.png">
+    <li id="logoutButton">Logout</li>
     </ul>
     </nav>
     <div id="main-page">
