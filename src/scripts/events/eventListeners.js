@@ -51,7 +51,6 @@ export default {
     },
     updateFormFields(eventId) {
 
-
         fetch(`http://localhost:8088/events/${eventId}`)
             .then(response => response.json())
             .then(event => {
@@ -64,7 +63,7 @@ export default {
                 const eventDate = document.querySelector("#eventDate")
 
 
-                hiddenEventId.value = event.id // Hidden value. User no see. 🙈
+                hiddenEventId.value = event.id
                 eventName.value = event.name
                 eventLocation.value = event.location
                 eventDate.value = event.date
@@ -82,14 +81,14 @@ export default {
     },
     addEventListenerToSaveChangesButton: () => {
         document.querySelector("#saveChanges").addEventListener("click", e => {
+            const eventId = document.querySelector("#eventId").value
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
-            const eventId = eventId.id
-
+            const userId = sessionStorage.getItem("activeUser")
+    
             //save journal entry (json-server returns it) then render it
-            data.updateSingleEvent({ name, date, location, eventId})
-
+            data.updateSingleEvent({ name, date, location, userId}, eventId)
                 .then(data.getAllEvents)
                 .then(response => {
                     render.renderEvent(response)
@@ -97,7 +96,9 @@ export default {
                     document.querySelector("#eventDate").value = ""
                     document.querySelector("#eventLocation").value = ""
                 })
-
+    
         })
+        
+       
     }
 }

@@ -19,8 +19,8 @@ export default {
         })
             .then(response => response.json())
     },
-    updateSingleEvent (eventObject) {
-        return fetch(`http://localhost:8088/events/${eventObject.id}`, {
+    updateSingleEvent (eventObject, id) {
+        return fetch(`http://localhost:8088/events/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
