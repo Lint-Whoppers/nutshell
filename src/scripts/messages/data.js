@@ -6,6 +6,11 @@ const messagesData = {
             .then(response => response.json())
     },
 
+    getSingleMessage(messageId) {
+        return fetch(`http://localhost:8088/messages/${messageId}?_expand=user`)
+        .then(response => response.json())
+    },
+
     storeNewMessage(newMessageObject) {
         return fetch("http://localhost:8088/messages", {
                     method: "POST",
@@ -14,7 +19,24 @@ const messagesData = {
                     },
                     body: JSON.stringify(newMessageObject)
                 })
-                    .then(contacts => contacts.json())
+                    .then(messages => messages.json())
+    },
+
+    deleteMessage(messageId) {
+        return fetch(`http://localhost:8088/messages/${messageId}`, {
+            method: "DELETE"
+          })
+            .then(response => response.json())
+    },
+
+    updateSingleMessage(message) {
+        return fetch(`http://localhost:8088/messages/${message.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(message)
+        })
     }
 }
 
