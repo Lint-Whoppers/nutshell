@@ -1,7 +1,7 @@
 import taskRender from "./tasksForm.js";
 import randomTask from "./taskDataHandler.js";
 
-const taskEvents = {
+export default taskEvents = {
     createTaskButtonHandler () {
         const createTaskButton = document.querySelector("#addTaskButton")
         createTaskButton.addEventListener("click", () => {
@@ -21,9 +21,17 @@ const taskEvents = {
                 .then(randomTask.getAllTasks)
                 .then(taskRender.displayTasksFunction);
             }
-        });
+        })
+    },
+// This needs to be refactored to fit the example on the 
+    editDeleteListener () {
+        const editTaskButon = document.querySelector("#taskDisplay")
+        editTaskButon.addEventListener("click", event => {
+            if (event.target.id.startsWith("editTask--")) {
+                const taskToEdit = event.target.id.split("--")[1]
+
+                updateEditFields(taskToEdit)
+            }  
+        })
     }
 }
-
-export default taskEvents;
-

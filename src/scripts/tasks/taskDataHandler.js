@@ -34,6 +34,10 @@ deleteTaskEntries (taco) {
     })
         .then(response => response.json())
 },
+
+getSingleTask () {
+    return fetch(`http://localhost:8088/tasks`)
+}
 }
 
 export default randomTask;
