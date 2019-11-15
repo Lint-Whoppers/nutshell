@@ -1,4 +1,4 @@
-// author:Michelle Johnson 
+// author:Michelle Johnson
 // purpose: build and append form
 import eventListener from "../events/eventListeners"
 
