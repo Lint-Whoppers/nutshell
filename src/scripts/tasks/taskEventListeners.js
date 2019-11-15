@@ -3,7 +3,7 @@ import randomTask from "./taskDataHandler.js";
 
 let taskEvents = {
     createTaskButtonHandler () {
-        const createTaskButton = document.querySelector("#addTaskButton")
+        const createTaskButton = document.querySelector("#saveTask")
         createTaskButton.addEventListener("click", () => {
             // const newTaskObject = document.querySelector("#taskInputField").value;
             // console.log(newTaskObject)
@@ -34,20 +34,22 @@ let taskEvents = {
             }
         })
     },
-    saveButtonListener () {
-        saveButtonListener.addeventListener("click", event => {
-            const saveButtonId = document.querySelector("#taskId")
-    
-            if ( saveButtonId.value !== "") {
-                editTask(taskId)
-            } else {
-               const editTask = id => {
-                   const updatedTask = {
-                       taskName: document.querySelector("#taskName").value,
-                       taskDate: document.querySelector("#taskDate").value
-                   }
-                   randomTask.putEditedTask()
-               } // WTF IS SAVE FUNCTIONALITY?!!!
-            }
+    // saveButtonListener () {
+    //     const saveButtonId = document.querySelector("#saveTask")
+    //     saveButtonListener.addeventListener("click", event => {
+    //             console.log("click")
+    //         if ( saveButtonId.value !== "") {
+    //             editTask(taskId)
+    //         } else {
+    //            const editTask = id => {
+    //                const updatedTask = {
+    //                    taskName: document.querySelector("#taskId").value,
+    //                    taskDate: document.querySelector("#taskDate").value
+    //                }
+    //                randomTask.putEditedTask()
+    //            } // WTF IS SAVE FUNCTIONALITY?!!!
+    //         }
+    //     })
+    // }
 }
 export default taskEvents;
