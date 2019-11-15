@@ -1,12 +1,21 @@
 # Otter: The Information Dashboard
 
-## Preface
+The contributors to this project were:
+* Jeremiah Bell (To-Do List)
+* Charles Jackson (News)
+* Michelle Johnson (Events)
+* Sam Pita (Messages)
 
-The contributors to this project were Jeremiah Bell, Charles Jackson, Michelle Johnson, and Sam Pita.
+## The Planning Process
 
 We took time before writing any code to develop an Entity Relationship Diagram laying out our database relationships. This is shown below:
 
 ![Screenshot](src/images/ERD.png)
+
+We also created a basic wireframe for what we wanted our application to look like.
+
+![Img](src/images/wireframe.png)
+
 
 ## Why is the application called Otter?
 
@@ -24,63 +33,9 @@ Otters are social animals. They hold hands while sleeping so they don't drift ap
 
 ## Application Instructions
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
-
-You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
-
-1. Functions
-1. Databases/API ([JSON Server Documentation](https://github.com/typicode/json-server))
-1. Github
-1. Objects
-1. CSS/Flexbox
-1. Array methods
-1. Handling user events
-1. Factory functions
-1. Implementing CRUD operations
-1. Modular code with Webpack
-1. Relational data
-
-To start you off, here's an example of what the resources in your API should look like once it's populated with some data from your application.
-
-### Users
-
-```json
-{ "id": 1, "username": "Steve", "email": "me@me.com" }
-```
-
-### Messages
-
-```json
-{ "id": 1, "userId": 1, "message": "What's up?" }
-```
-
-### News
-
-```json
-{
-    "id": 1,
-    "userId": 2,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about workholes"
-}
-```
-
-### Friends
-
-```json
-{ "id": 1, "userId": 1, "loggedInUserId": 3 }
-```
-
-### Tasks
-
-```json
-{ "id": 1, "userId": 3, "task": "Take out garbage" }
-```
-
-## Professional Requirements
-
-1. All teammates must be using Webpack to compile their code.
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
-1. The README for your project should include instructions on how another person can download and run the application
-1. An ERD showing the database relationships. A screenshot/image should be included on your README.
+1. Create an account
+2. You will then be automatically taken to the Main Page
+3. You will see a Friends, Events, Messages, News, and To-Do List section.
+4. You can create a new Event, Message, or To-Do task.
+5. You can also share a new article or add a new Friend.
+6. Click "Logout" to sign out of the application!
