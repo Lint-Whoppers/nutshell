@@ -8,7 +8,8 @@ export default {
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
-            const userId = sessionStorage.getItem("activeUser")
+            const userId = parseFloat(sessionStorage.getItem("activeUser"))
+
 
             //save journal entry (json-server returns it) then render it
             data.saveEventEntry({ name, date, location, userId })
@@ -85,7 +86,7 @@ export default {
             const name = document.querySelector("#nameOfEvent").value
             const date = document.querySelector("#eventDate").value
             const location = document.querySelector("#eventLocation").value
-            const userId = sessionStorage.getItem("activeUser")
+            const userId = parseFloat(sessionStorage.getItem("activeUser"))
     
             //save journal entry (json-server returns it) then render it
             data.updateSingleEvent({ name, date, location, userId}, eventId)
