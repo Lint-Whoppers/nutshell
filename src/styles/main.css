@@ -85,7 +85,7 @@ ul.topnav img.left {
 }
 
 /* The popup form - hidden by default */
-.signUpForm-popup {
+.signUpForm-popup, #newArticleContainer {
     display: none;
     margin-left: 25%;
     margin-right:25%;
@@ -175,27 +175,37 @@ label.messageLabel {
   margin-bottom: 0;
 }
 
-div.messageElementButtons {
-text-align: right;
-}
-
 h5#messagePostedBy{
   margin: 0;
 }
 
 #messageTimestamp {
-  font-size: 10px;
+  color: #90C6F4;
+  font-size: 9px;
   margin: 0;
+  word-wrap: normal;
 }
 
 .fa-pen, .fa-trash-alt {
+  color: #90C6F4;
   font-size: 12px;
   margin-right: 5px;
 }
 
-.fa-trash-alt:hover {
+.fa-save {
+  color: #90C6F4;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.fa-pen:hover, .fa-trash-alt:hover, .fa-save:hover {
   cursor: pointer;
-  color: rgb(216, 17, 17);
+  color: rgb(91, 171, 240);
+}
+
+#messageElementBottomRow {
+  display: flex;
+  justify-content: space-between;
 }
 
 .messageInput {
@@ -225,7 +235,7 @@ h5#messagePostedBy{
   border: solid 1px #dadada;
 }
 
-#newMessageSubmitButton:hover, .fa-pen:hover {
+#newMessageSubmitButton:hover {
   cursor: pointer;
   color: #90C6F4;
 }

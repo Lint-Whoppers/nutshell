@@ -1,7 +1,7 @@
 import messagesData from "./data"
 import dom from "./domRenderer.js"
 
-// Purpose: This file manages the Compose New Message input form in the Messages component. Author: Sam Pita
+// Purpose: This file manages the input forms in the Messages component. Author: Sam Pita
 
 const messagesForm = {
     getNewMessageInput() {
