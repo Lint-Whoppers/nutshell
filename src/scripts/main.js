@@ -45,6 +45,7 @@ const startUpApplication = () => {
         taskEvents.createTaskButtonHandler()
         eventListener.deleteButtonListener()
         messagesEvents.createNewMessageButtonHandler()
+        messagesEvents.attachMessageElementBttnHandlers()
     }
 }
 
